@@ -1,6 +1,6 @@
 Mixtisque
 ---------
-Hybrid and non-hybrid whole genome assembler with resistome identification for Illumina and Nanopore reads.
+Hybrid and non-hybrid whole genome assembler with resistome identification for Illumina, Nanopore or PacBio reads.
 
 Introduction
 ------------
