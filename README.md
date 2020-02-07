@@ -8,6 +8,7 @@ Mixtisque is a bioinformatics pipeline for quality control, assembly, annotation
 
 Documentation
 -------------
+  - [Tutorial] (https://github.com/BioRRW/Mixtisque/blob/master/docs/tutorial.md)
   - [Software Requirements](https://github.com/BioRRW/Mixtisque/blob/master/docs/requirements.md)
   - [Process Overview](https://github.com/BioRRW/Mixtisque/blob/master/docs/process.md)
   - [Installation](https://github.com/BioRRW/Mixtisque/blob/master/docs/installation.md)
