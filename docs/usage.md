@@ -53,11 +53,7 @@ $ nextflow run mixtisque.nf --help
         --mode          STR     (default: normal)
                                 conservative = smaller contigs, lowest misassembly rate
                                 normal = moderate contig size and misassembly rate
-                                bold = longest contigs, higher misassembly rate  
-                                
-    Assembly Quality Assessment:
-        --quast_ref     STR     Path to directory containing genome reference (.fna) and genome feature file (.gff) (version 3)
-                                    (*Instead of supplying the path here, you may include the path in the input (.csv) file)
+                                bold = longest contigs, higher misassembly rate                             
     Annotation:
         --prokk_db      STR     (default: "null" will use prokka default annotation database)
                                 <one of premade databases: "Campy", "Ecoli", "Efaecalis", "Salmonella", "Staph"> 
@@ -85,11 +81,11 @@ more details about this option
             Column 5: Path to directory containing QUAST genome reference file
             Column 6: Path to directory containing QUAST reference genome feature file
                         (.fna and .gff (version 3) files)
-                        (*Leave BLANK if providing these via --quast_fna <STR> and --quast_gff <STR> command line options)
+                        
   ### Example Input (.csv) File:
 
 | Sample ID | Path to long read fastq file |  Path to FORWARD short read fastq file |  Path to REVERSE short read fastq file | Path to QUAST genome reference | Path to QUAST genome feature file |
-| --------- | ----------- | ----------- | ----------- | ----------- |
+| --------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Sample_1, | containers/data/MinION/sample1_minion_001.fq, | containers/data/illumina/sample1_R1_001.fq, | containers/data/illumina/sample1_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna |, | containers/data/quast_references/ecoli_k12.fna |
 | Sample_2, | containers/data/MinION/sample2_minion_001.fq, | containers/data/illumina/sample2_R1_001.fq, | containers/data/illumina/sample2_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna |, | containers/data/quast_references/ecoli_k12.fna |
 | Sample_3, | containers/data/MinION/sample3_minion_001.fq, | containers/data/illumina/sample3_R1_001.fq, | containers/data/illumina/sample3_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna |, | containers/data/quast_references/ecoli_k12.fna |
