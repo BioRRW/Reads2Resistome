@@ -86,8 +86,8 @@ more details about this option
 
 | Sample ID | Path to long read fastq file |  Path to FORWARD short read fastq file |  Path to REVERSE short read fastq file | Path to QUAST genome reference file | Path to QUAST genome feature file |
 | --------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Sample_1, | containers/data/MinION/sample1_minion_001.fq, | containers/data/illumina/sample1_R1_001.fq, | containers/data/illumina/sample1_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.fna |
-| Sample_2, | containers/data/MinION/sample2_minion_001.fq, | containers/data/illumina/sample2_R1_001.fq, | containers/data/illumina/sample2_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.fna |
+| Sample_1, | containers/data/MinION/sample1_minion_001.fq, | containers/data/illumina/sample1_R1_001.fq, | containers/data/illumina/sample1_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.gff |
+| Sample_2, | containers/data/MinION/sample2_minion_001.fq, | containers/data/illumina/sample2_R1_001.fq, | containers/data/illumina/sample2_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.gff |
 | Sample_3, | containers/data/MinION/sample3_minion_001.fq, | containers/data/illumina/sample3_R1_001.fq, | containers/data/illumina/sample3_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.gff |
 
                     
