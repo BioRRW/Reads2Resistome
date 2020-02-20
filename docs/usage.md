@@ -47,7 +47,7 @@ $ nextflow run mixtisque.nf --help
         --leading       INT     cut bases off the start of a read, if below a threshold quality 
         --minlen        INT     drop the read if it is below a specified length 
         --slidingwindow INT     perform sw trimming, cutting once the average quality within the window falls below a threshold 
-      --trailing        INT      cut bases off the end of a read, if below a threshold quality 
+        --trailing      INT     cut bases off the end of a read, if below a threshold quality 
 
     Assembly: 
         --mode          STR     (default: normal)
@@ -61,7 +61,7 @@ $ nextflow run mixtisque.nf --help
         --threads       INT     Number of CPUs to allocate to EACH process individually 
         
     Nextflow Options:
-        -resume             Pipeline will resume from previous run if terminated
+        -resume                 Pipeline will resume from previous run if terminated
         
 ### Option: --XYZ
 
@@ -86,9 +86,9 @@ more details about this option
 
 | Sample ID | Path to long read fastq file |  Path to FORWARD short read fastq file |  Path to REVERSE short read fastq file | Path to QUAST genome reference file | Path to QUAST genome feature file |
 | --------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Sample_1, | containers/data/MinION/sample1_minion_001.fq, | containers/data/illumina/sample1_R1_001.fq, | containers/data/illumina/sample1_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna |, | containers/data/quast_references/ecoli_k12.fna |
-| Sample_2, | containers/data/MinION/sample2_minion_001.fq, | containers/data/illumina/sample2_R1_001.fq, | containers/data/illumina/sample2_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna |, | containers/data/quast_references/ecoli_k12.fna |
-| Sample_3, | containers/data/MinION/sample3_minion_001.fq, | containers/data/illumina/sample3_R1_001.fq, | containers/data/illumina/sample3_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna |, | containers/data/quast_references/ecoli_k12.gff |
+| Sample_1, | containers/data/MinION/sample1_minion_001.fq, | containers/data/illumina/sample1_R1_001.fq, | containers/data/illumina/sample1_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.fna |
+| Sample_2, | containers/data/MinION/sample2_minion_001.fq, | containers/data/illumina/sample2_R1_001.fq, | containers/data/illumina/sample2_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.fna |
+| Sample_3, | containers/data/MinION/sample3_minion_001.fq, | containers/data/illumina/sample3_R1_001.fq, | containers/data/illumina/sample3_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.gff |
 
                     
 
