@@ -33,7 +33,7 @@ $ nextflow run mixtisque.nf --help
                                     (*Instead of supplying the path here, you may include the path in the input (.csv) file)
    
       
-
+2
 ## Full list of command line options
 
     General:
@@ -88,7 +88,7 @@ more details about this option
   ### Example Input (.csv) File:
 
 | Sample ID | Path to long read fastq file |  Path to FORWARD short read fastq file |  Path to REVERSE short read fastq file | Path to QUAST genome reference and genome feature file |
-| --------- | ----------- |
+| --------- | ----------- | ----------- | ----------- | ----------- |
 | Sample_1, | containers/data/MinION/sample1_minion_001.fq, | containers/data/illumina/sample1_R1_001.fq, | containers/data/illumina/sample1_R2_001.fq, | containers/data/quast_references/ |
 | Sample_2, | containers/data/MinION/sample2_minion_001.fq, | containers/data/illumina/sample2_R1_001.fq, | containers/data/illumina/sample2_R2_001.fq, | containers/data/quast_references/ |
 | Sample_3, | containers/data/MinION/sample3_minion_001.fq, | containers/data/illumina/sample3_R1_001.fq, | containers/data/illumina/sample3_R2_001.fq, | containers/data/quast_references/ |
