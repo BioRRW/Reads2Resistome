@@ -5,8 +5,7 @@ Usage
 
 To run hybrid against a Ecoli database with approximately 16 threads:
 ```
-(change and add section for non hybrid)
-nextflow mixtisque.nf --input "containers/data/raw/input_reads-single.csv " --output "temp/output" -w "temp/work" -resume --threads 16 --db Ecoli
+nextflow mixtisque.nf --input "containers/data/input_Samples.csv " --output "temp/output" --threads 2 -- assembly nonhybrid -w "temp/work"
 ```
 
 ### Display Help Message
