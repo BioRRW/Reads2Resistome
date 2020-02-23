@@ -56,6 +56,10 @@ $ nextflow run mixtisque.nf --help
     Annotation:
         --prokk_db      STR     (default: "null" will use prokka default annotation database)
                                 <one of premade databases: "Campy", "Ecoli", "Efaecalis", "Salmonella", "Staph"> 
+    Serovar Prediction:
+        --serovar       STR     (defualt: "false" will not run servar prediction by SISTR)
+                                true = run SISTR serovar prediction (*Reguires Salmonella genome)
+    
     Computation:
         --threads       INT     Number of CPUs to allocate to EACH process individually 
         
