@@ -52,10 +52,7 @@ $ nextflow run mixtisque.nf --help
         --mode          STR     (default: normal)
                                 conservative = smaller contigs, lowest misassembly rate
                                 normal = moderate contig size and misassembly rate
-                                bold = longest contigs, higher misassembly rate                             
-    Annotation:
-        --prokk_db      STR     (default: "null" will use prokka default annotation database)
-                                <one of premade databases: "Campy", "Ecoli", "Efaecalis", "Salmonella", "Staph"> 
+                                bold = longest contigs, higher misassembly rate                              
     Serovar Prediction:
         --serovar       STR     (defualt: "false" will not run servar prediction by SISTR)
                                 true = run SISTR serovar prediction (*Reguires Salmonella genome)
@@ -77,6 +74,8 @@ more details about this option
     Required:
             Column 1: Sample ID 
                 (must be unique, sample ID will be used to generate ALL reports for this sample)
+            Column 2: Prokka_Database
+                (If not using custom database enter "default")
             Column 2: Path to long read .fastq file (may update later to input fast5 files)
                     (*Leave BLANK, no spaces, if only providing short reads)
             Column 3: Path to FORWARD short read .fastq file
@@ -87,11 +86,11 @@ more details about this option
                         
   ### Example Input (.csv) File:
 
-| Sample ID | Path to long read fastq file |  Path to FORWARD short read fastq file |  Path to REVERSE short read fastq file | Path to QUAST genome reference file | Path to QUAST genome feature file |
-| --------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Sample_1, | containers/data/MinION/sample1_minion_001.fq, | containers/data/illumina/sample1_R1_001.fq, | containers/data/illumina/sample1_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.gff |
-| Sample_2, | containers/data/MinION/sample2_minion_001.fq, | containers/data/illumina/sample2_R1_001.fq, | containers/data/illumina/sample2_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.gff |
-| Sample_3, | containers/data/MinION/sample3_minion_001.fq, | containers/data/illumina/sample3_R1_001.fq, | containers/data/illumina/sample3_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.gff |
+| Sample ID | Prokka_Database | Path to long read fastq file |  Path to FORWARD short read fastq file |  Path to REVERSE short read fastq file | Path to QUAST genome reference file | Path to QUAST genome feature file |
+| --------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Sample_1_Ecoli, | Ecoli | containers/data/MinION/sample1_minion_001.fq, | containers/data/illumina/sample1_R1_001.fq, | containers/data/illumina/sample1_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.gff |
+| Sample_2, | default | containers/data/MinION/sample2_minion_001.fq, | containers/data/illumina/sample2_R1_001.fq, | containers/data/illumina/sample2_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.gff |
+| Sample_3_Salmonella, | Salmonella | containers/data/MinION/sample3_minion_001.fq, | containers/data/illumina/sample3_R1_001.fq, | containers/data/illumina/sample3_R2_001.fq, | containers/data/quast_references/ecoli_k12.fna, | containers/data/quast_references/ecoli_k12.gff |
 
                     
 
