@@ -55,11 +55,6 @@ $ nextflow mixtisque.nf --help
         
     Nextflow Options:
         -resume                 Pipeline will resume from previous run if terminated
-        
-### Option: --XYZ
-
-more details about this option
-
 
 ### Input (.csv) File Requirements
     A user supplied input (.csv) is required.
@@ -69,14 +64,18 @@ more details about this option
                 (must be unique, sample ID will be used to generate ALL reports for this sample)
             Column 2: Prokka_Database
                 (If not using custom database enter "default")
-            Column 2: Path to long read .fastq file (may update later to input fast5 files)
+            Column 3: Path to long read .fastq file (may update later to input fast5 files)
                     (*Leave BLANK, no spaces, if only providing short reads)
-            Column 3: Path to FORWARD short read .fastq file
-            Column 4: Path to REVERSE short read .fastq file
-            Column 5: Path to directory containing QUAST genome reference file
-            Column 6: Path to directory containing QUAST reference genome feature file
+            Column 4: Path to FORWARD short read .fastq file
+            Column 5: Path to REVERSE short read .fastq file
+            Column 6: Path to directory containing QUAST genome reference file
+            Column 7: Path to directory containing QUAST reference genome feature file
                         (.fna and .gff (version 3) files)
-                        
+
+### Serovar pridictions via SISTR
+- To enable SISTR serovar prediction for *Salmonella* samples you must set the Prokka_Database = "Salmonella" 
+    - see example below (Sample_3_Salmonella)
+
   ### Example Input (.csv) File:
 
 | Sample ID | Prokka_Database | Path to long read fastq file |  Path to FORWARD short read fastq file |  Path to REVERSE short read fastq file | Path to QUAST genome reference file | Path to QUAST genome feature file |
