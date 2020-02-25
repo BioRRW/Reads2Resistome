@@ -53,8 +53,12 @@ $ nextflow mixtisque.nf --help
     Computation:
         --threads       INT     Number of CPUs to allocate to EACH process individually 
         
-    Nextflow Options:
+    Nextflow Options: [(see nextflow documentation for additional details)](https://www.nextflow.io/docs/latest/tracing.html)
         -resume                 Pipeline will resume from previous run if terminated
+        -with-report            A single document which includes many useful metrics about a workflow execution
+        -with-trace             Creates an execution tracing file that contains some useful information about each process.executed in your pipeline script
+        -with-timeline          Render an HTML timeline for all processes executed in your pipeline
+        -with-dag               creates a file containing a textual representation of the pipeline execution graph in the DOT format     
 
 ### Input (.csv) File Requirements
     A user supplied input (.csv) is required.
