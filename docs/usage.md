@@ -5,14 +5,14 @@ Usage
 
 To run hybrid against a Ecoli database with approximately 16 threads:
 ```
-nextflow mixtisque.nf --input "containers/data/input_Samples.csv " --output "temp/output" --threads 2 -- assembly nonhybrid -w "temp/work"
+nextflow mixtisque.nf  --input "containers/data/raw/input_3_Samples.csv " --assembly hybrid --output "temp/output" -w "temp/work"
 ```
 
 ### Display Help Message
 
 The `help` parameter displays the available options and commands.
 ```
-$ nextflow run mixtisque.nf --help
+$ nextflow mixtisque.nf --help
 ```
 
 ## Required command line parameters
@@ -27,13 +27,9 @@ $ nextflow run mixtisque.nf --help
                                     hybrid = Assembly using both Nanopore long reads and Illumina short reads
                                     nonhybrid = Assembly using Illumina short reads only
                                     long_read = Assembly using MinION long reads only (coming soon)
-    Assembly Quality Assessment:
-        --quast_ref     STR     Path to directory containing genome reference (.fna) and genome feature file (.gff) (version 3)
-                                    (*Instead of supplying the path here, you may include the path in the input (.csv) file)
    
-      
-2
 ## Full list of command line options
+    usage: usage: mixtisque [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--serovar] [--threads] [-resume]
 
     General:
         --help            This help
@@ -53,10 +49,7 @@ $ nextflow run mixtisque.nf --help
                                 conservative = smaller contigs, lowest misassembly rate
                                 normal = moderate contig size and misassembly rate
                                 bold = longest contigs, higher misassembly rate                              
-    Serovar Prediction:
-        --serovar       STR     (defualt: "false" will not run servar prediction by SISTR)
-                                true = run SISTR serovar prediction (*Reguires Salmonella genome)
-    
+                                
     Computation:
         --threads       INT     Number of CPUs to allocate to EACH process individually 
         
