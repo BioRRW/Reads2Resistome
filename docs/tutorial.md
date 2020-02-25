@@ -28,12 +28,21 @@ $ ls references/
 EcoliK12_MG1655_U00096.3.fna EcoliK12_MG1655_U00096.3.gff 
 ```
 
-### Take a look at the input_hybrid.csv file
+### Take a look at the input.csv file
 Note:
-- we will be using the 'default' Prokka annotation database (column 2)
-- we have set the paths to the sequence and reference files according to the [usage](https://github.com/BioRRW/Mixtisque/blob/master/docs/usage.md) docs
+- We will be using the 'default' Prokka annotation database (column 2)
+- We have set the paths to the sequence and reference files according to the [usage](https://github.com/BioRRW/Mixtisque/blob/master/docs/usage.md) docs
+  - Sample ID in column 1
+  - Genus for Prokka annotation in column 2
+  - The long read file is in column 3
+  - The forward short read file in column 4
+  - The forward short read file in column 5
+  - QUAST reference genome file in column 6
+  - QUAST genome reference file in column 7 
 ```
 $ cd ..
 $ nano input_hybrid.csv
 TE1,default,containers/Test_Data/fastq/Sample_MinION.fastq.gz,containers/Test_Data/fastq/Sample_R1_Illumina.fastq.gz,containers/Test_Data/fastq/Sample_R2_Illumina.fastq.gz,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.fna,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.gff
+```
+
 ```
