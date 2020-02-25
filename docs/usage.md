@@ -29,7 +29,7 @@ $ nextflow mixtisque.nf --help
                                     long_read = Assembly using MinION long reads only (coming soon)
    
 ## Full list of command line options
-    usage: usage: mixtisque [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--serovar] [--threads] [-resume]
+    usage: usage: mixtisque [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--threads] [-resume]
 
     General:
         --help            This help
