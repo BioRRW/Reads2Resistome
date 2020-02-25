@@ -1,36 +1,24 @@
 Configuration
 -------------
 
-To modify parameters: open the nextflow.config file 
-
-### Input Sequences
-```
-/* Location of forward and reverse read pairs in addition to Nanopore reads */
-reads = "data/raw/input_reads.csv"
-```
-
-### Host Genome
-```
-/* Location of host genome file */
-host = "data/genome/host/gallus.fa"
-```
+To modify default parameters: open the nextflow.config file 
 
 ### Adapter Sequences
 ```
 /* Location of adapter sequences */
-adapters = "data/adapters/nextera.fa"
+adapters = "containers/data/adapters/nextera.fa"
 ```
 
 ### Output Directory
 ```
 /* Output directory */
-output = "./test"
+output = "./temp/output"
 ```
 
 ### Number of Threads
 ```
 /* Number of threads */
-threads = 16
+threads = 1
 ```
 
 ### Trimmomatic Parameters
@@ -42,6 +30,18 @@ slidingwindow = "4:15"
 minlen = 36
 ```
 
-### Unicycler Parameters (add fuctionality for hybrid or nonhybrid)
+### ARIBA Parameters
+**More than one thread for each ARIBA process is NOT recommnded**
+/* ARIBA */
+ariba_threads = 1
 
+### Unicycler Parameters
+/* Unicycler parameters */
+assembly = "hybrid"
+mode = "normal"
+
+### Computation Parameters 
+- Here it is important to do some quick math to estimate CPU and memory usage
+  - For example: 
+    - assembling 5 genomes using 1 thread = 5*1
 
