@@ -12,7 +12,12 @@ This pipeline uses a variety of open-source tools. The tools used, descriptions,
   - Description: Bioinformatics Application for Navigating De novo Assembly Graphs Easily.
   - Version: 0.8.1
   - Source: https://github.com/rrwick/Bandage
-  
+
+### BBTools (dedupe.sh)
+  - Description: Deduplicating read sets.
+  - Version: 38.79
+  - Source: https://jgi.doe.gov/data-and-tools/bbtools/
+
 ### Bedtools
   - Description: Bedtools is a suite of tools that can be used to compute and extract useful information from BAM, BED, and BCF files.
   - Version: 2.26.0
@@ -57,6 +62,16 @@ This pipeline uses a variety of open-source tools. The tools used, descriptions,
   - Description: MultiQC is a tool that utilizes software logs to create html reports.
   - Version: 1.0
   - DOI: https://doi.org/10.1093/bioinformatics/btw354
+
+### NanoPlot
+  - Description: Plotting scripts for long read sequencing data.
+  - Version: 1.28.1
+  - Source: https://github.com/wdecoster/NanoPlot
+  
+### Phigaro
+  - Description: Tool for predictions phages and prophages from nucleid acid sequences.
+  - Version: 2.2.1
+  - Source: https://github.com/bobeobibo/phigaro
   
 ### Plasmid Finder Database
   - Description: Plasmid identification.
@@ -87,7 +102,12 @@ This pipeline uses a variety of open-source tools. The tools used, descriptions,
   - Description: Unicycler is an assembly pipeline for bacterial genomes.
   - Version: 0.4.8
   - Source: https://github.com/rrwick/Unicycler
-  
+
+### SISTR
+  - Description: Serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene                     alleles using BLAST.
+  - Version: 1.0.1
+  - Source: https://github.com/phac-nml/sistr_cmd
+
 ### SPAdes
   - Description: SPAdes is a short and long read genome assembler based on the classic De Bruijn graph.
   - Version: 3.10.1
