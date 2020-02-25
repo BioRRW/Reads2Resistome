@@ -22,11 +22,6 @@ $ nextflow mixtisque.nf --help
         --input         STR     Path to input (.csv) file 
                                     (*See Input (.csv) File Requirements for details)
         --output        STR     Path to output directory
-    Assembly:
-        --assembly      STR     (default: hybrid)
-                                    hybrid = Assembly using both Nanopore long reads and Illumina short reads
-                                    nonhybrid = Assembly using Illumina short reads only
-                                    long_read = Assembly using MinION long reads only (coming soon)
    
 ## Full list of command line options
     usage: usage: mixtisque [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--threads] [-resume]
@@ -53,7 +48,7 @@ $ nextflow mixtisque.nf --help
     Computation:
         --threads       INT     Number of CPUs to allocate to EACH process individually 
         
-    Nextflow Options: [(see nextflow documentation for additional details)](https://www.nextflow.io/docs/latest/tracing.html)
+    Nextflow Options: [see nextflow documentation for additional details](https://www.nextflow.io/docs/latest/tracing.html)
         -resume                 Pipeline will resume from previous run if terminated
         -with-report            A single document which includes many useful metrics about a workflow execution
         -with-trace             Creates an execution tracing file that contains some useful information about each process.executed in your pipeline script
