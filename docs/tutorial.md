@@ -31,7 +31,7 @@ EcoliK12_MG1655_U00096.3.fna EcoliK12_MG1655_U00096.3.gff
 ### Take a look at the input.csv file
 Note:
 - We will be using the 'default' Prokka annotation database (column 2)
-- We have set the paths to the sequence and reference files according to the [Ssage](https://github.com/BioRRW/Mixtisque/blob/master/docs/usage.md) docs
+- We have set the paths to the sequence and reference files according to the [Usage](https://github.com/BioRRW/Mixtisque/blob/master/docs/usage.md) docs
   - Sample ID in column 1
   - Genus choice Prokka annotation in column 2 
   - The long read file is in column 3
