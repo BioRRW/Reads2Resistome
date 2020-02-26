@@ -9,7 +9,7 @@ Follow steps 1-4 on [Installation page](https://github.com/BioRRW/Mixtisque/blob
 $ cd <NAME> 
 $ cd containers/Test_Data/
 ```
-### You should see 3 directories and two files
+You should see 3 directories and two files
 ```
 $ ls
 fastq references input_nonhybrid.csv input_hybrid.csv
@@ -83,7 +83,7 @@ Launching `<NAME>` [maniac_dalembert] - revision: fc615a5471
 
 ```
 Nextflow creates random names for the runs, 'maniac_dalembert'.
-Each process states the sub-woring directory, for example: [cb/f8b4ca] (ie ~/temp/work_hybrid/cb/f8b4ca...)
+Each process states the sub-woring directory, for example: [cb/f8b4ca] (ie ~/temp/work_nonhybrid/cb/f8b4ca...)
 
 ### Once complete you will see something similar to this:
 ```
@@ -104,9 +104,9 @@ Launching `<NAME>` [maniac_dalembert] - revision: fc615a5471
 [-        ] process > SISTR                -
 [fb/0b1341] process > Prokka (TE1)         [100%] 1 of 1 ✔
 Completed at: 25-Feb-2020 20:20:32
-Duration    : 3m 11s
-CPU hours   : 0.7 (89.8% cached)
-Succeeded   : 4
+Duration    : 32m 11s
+CPU hours   : 123.7 
+Succeeded   : 12
 ```
 Processes which are not used (NanoPlot and SISTR) will show no completion or any working directory information.
 
