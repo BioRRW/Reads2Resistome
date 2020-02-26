@@ -44,5 +44,20 @@ $ cd ..
 $ nano input_hybrid.csv
 Sample_1_Ecoli,default,containers/Test_Data/fastq/Sample_MinION.fastq.gz,containers/Test_Data/fastq/Sample_R1_Illumina.fastq.gz,containers/Test_Data/fastq/Sample_R2_Illumina.fastq.gz,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.fna,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.gff
 ```
-
+### Move back to the < Name > install directory:
 ```
+$ cd ~/<NAME>
+```
+### You can choose to test either or both below:
+
+First we run the default hybrid pipeline:
+```
+$ nextflow mixtisque.nf  --input "containers/Test_Data/input_3_Samples.csv " --output "temp/output_hybrid" -w "temp/work_hybrid"
+```
+Second we run the nonhybrid pipeline:
+```
+$ nextflow mixtisque.nf  --input "containers/Test_Data/input_3_Samples.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
+```
+Note: 
+- Output (--output) directories and Nextflow working directory (-w) are kept separate.
+ 
