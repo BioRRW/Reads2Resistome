@@ -49,7 +49,6 @@ $ nextflow mixtisque.nf --help
                                 false = ARIBA will not run
         --prokka_run    STR     (default: true)
                                 false = Prokka will not run
-                                    (*SISTR serovar prediction relies on Prokka annotation)
                                     
     Computation:
         --threads       INT     Number of CPUs to allocate to EACH process individually 
