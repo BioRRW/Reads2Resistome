@@ -44,7 +44,13 @@ $ nextflow mixtisque.nf --help
                                 conservative = smaller contigs, lowest misassembly rate
                                 normal = moderate contig size and misassembly rate
                                 bold = longest contigs, higher misassembly rate                              
-                                
+    Annotation: 
+        --ariba_run     STR     (default: true)
+                                false = ARIBA will not run
+        --prokka_run    STR     (default: true)
+                                false = Prokka will not run
+                                    (*SISTR serovar prediction relies on Prokka annotation)
+                                    
     Computation:
         --threads       INT     Number of CPUs to allocate to EACH process individually 
         
