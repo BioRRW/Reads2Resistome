@@ -59,6 +59,10 @@ Nonhybrid pipeline:
 ```
 $ nextflow mixtisque.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
 ```
+longread pipeline:
+```
+$ nextflow mixtisque.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly longread --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
+```
 Note: 
 - Output (--output) directories and Nextflow working directory (-w) are kept separate.
  
