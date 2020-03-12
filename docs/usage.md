@@ -5,14 +5,14 @@ Usage
 
 To run hybrid against a Ecoli database with approximately 16 threads:
 ```
-nextflow mixtisque.nf  --input "containers/data/raw/input_3_Samples.csv " --assembly hybrid --output "temp/output" -w "temp/work"
+nextflow R2R.nf  --input "containers/data/raw/input_3_Samples.csv " --assembly hybrid --output "temp/output" -w "temp/work"
 ```
 
 ### Display Help Message
 
 The `help` parameter displays the available options and commands.
 ```
-$ nextflow mixtisque.nf --help
+$ nextflow R2R.nf --help
 ```
 
 ## Required command line parameters
@@ -24,7 +24,7 @@ $ nextflow mixtisque.nf --help
         --output        STR     Path to output directory
    
 ## Full list of command line options
-    usage: usage: mixtisque [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--threads] [-resume]
+    usage: nextflow R2R.nf [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--threads] [-resume]
 
     General:
         --help            This help
