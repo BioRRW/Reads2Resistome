@@ -6,13 +6,13 @@ Follow steps 1-4 on [Installation page](https://github.com/BioRRW/Mixtisque/blob
 
 ### Find the test data folder
 ```
-$ cd <NAME> 
+$ cd Reads2Resistome 
 $ cd containers/Test_Data/
 ```
-You should see two directories and one file
+You should see two directories and two files
 ```
 $ ls
-fastq references input_tutorial.csv
+fastq references input_tutorial.csv R2R.nf
 ```
 fastq folder contains three gzipped files
 Unzip the .fastq.gz files
@@ -36,7 +36,7 @@ Sample_1_Ecoli,default,containers/Test_Data/fastq/Sample1_MinION.fastq.gz,contai
 ```
 Note:
 - We will be using the 'default' Prokka annotation database (column 2)
-- We have set the paths to the sequence and reference files according to the [Usage](https://github.com/BioRRW/Mixtisque/blob/master/docs/usage.md) docs
+- We have set the paths to the sequence and reference files according to the [Usage](https://github.com/BioRRW/Reads2Resistome/blob/master/docs/usage.md) docs
   - Sample ID in column 1
   - Genus choice Prokka annotation in column 2 
   - The long read file is in column 3
@@ -45,23 +45,23 @@ Note:
   - QUAST reference genome file in column 6
   - QUAST genome reference file in column 7 
   
-### Move back to the < Name > install directory:
+### Move back to the Reads2Resistome install directory:
 ```
-$ cd ~/<NAME>
+$ cd ~/Reads2Resistome
 ```
 ### You can choose to test either or both below:
 
 Default hybrid pipeline:
 ```
-$ nextflow mixtisque.nf  --input "containers/Test_Data/input_tutorial.csv " --output "temp/output_hybrid" -w "temp/work_hybrid"
+$ nextflow R2R.nf  --input "containers/Test_Data/input_tutorial.csv " --output "temp/output_hybrid" -w "temp/work_hybrid"
 ```
 Nonhybrid pipeline:
 ```
-$ nextflow mixtisque.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
+$ nextflow R2R.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
 ```
 longread pipeline:
 ```
-$ nextflow mixtisque.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly longread --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
+$ nextflow R2R.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly longread --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
 ```
 Note: 
 - Output (--output) directories and Nextflow working directory (-w) are kept separate.
@@ -93,7 +93,7 @@ Each process states the sub-woring directory, for example: [cb/f8b4ca] (ie ~/tem
 ### Once complete you will see something similar to this:
 ```
 N E X T F L O W  ~  version 19.10.0
-Launching `<NAME>` [maniac_dalembert] - revision: fc615a5471
+Launching `R2R` [maniac_dalembert] - revision: fc615a5471
 [a1/200c57] process > FastQC (Sample1)          [100%] 1 of 1 ✔
 [-        ] process > Nanoplot                    -
 [86/afce62] process > preMultiQC                [100%] 1 of 1 ✔
@@ -118,7 +118,7 @@ Processes which are not used (NanoPlot and SISTR) will show no completion or any
 ### Understanding the working directory and the -resume option:
 Run the exact command again and observe:
 ```
-$ nextflow mixtisque.nf  --input "containers/Test_Data/input_3_Samples.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
+$ nextflow R2R.nf  --input "containers/Test_Data/input_3_Samples.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
 N E X T F L O W  ~  version 19.10.0
 Launching `mixtisque-4.0.1.nf` [intergalactic_engelbart] - revision: c74303a777
 [a1/200c57] process > FastQC (Sample1)          [100%] 1 of 1, cached: 1 ✔
