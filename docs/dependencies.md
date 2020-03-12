@@ -1,7 +1,7 @@
 Dependencies
 ------------
 
-This pipeline uses a variety of open-source tools. The tools used, descriptions, and version specifics are provided below.
+R2R uses a variety of open-source tools. The tools used, descriptions, and version specifics are provided below.
 
 ### ARIBA
   - Description: Antimicrobial Resistance Identification By Assembly.
