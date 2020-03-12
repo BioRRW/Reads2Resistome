@@ -14,23 +14,23 @@ $ mv nextflow /usr/local/bin
 
 This `docker pull` command will download each of the required tools to run the pipeline.
 ```
-$ docker pull rrw/<NAME> -a 
+$ docker pull rrw/R2R -a 
 ```
 
 When the download is complete, you should have one Docker image.
 ```
 $ docker images
 
-<NAME>
+R2R
 ```
 
 ### Step 3 -- Download Source Code
 ```
-$ git clone https://github.com/BioRRW/<NAME>.git
+$ git clone https://github.com/BioRRW/R2R.git
 $ cd auir/
 ```
 
 ### Step 4 -- Run a Test
 ```
-nextflow <NAME>.nf --help
+nextflow R2R.nf --help
 ```
