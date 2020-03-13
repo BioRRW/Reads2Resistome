@@ -32,14 +32,16 @@ minlen = 36
 
 ### ARIBA Parameters
 **More than one thread for each ARIBA process is NOT recommnded**
+```
 /* ARIBA */
 ariba_threads = 1
-
+```
 ### Unicycler Parameters
+```
 /* Unicycler parameters */
 assembly = "hybrid"
 mode = "normal"
-
+```
 ### Computation Parameters 
 - Here it is important to do some quick math to estimate CPU and memory usage
   - For example setting all 'cpus = 1' and all 'maxForks = 1' 
@@ -47,5 +49,5 @@ mode = "normal"
   - Another example all 'cpus = 1' and all 'maxForks = 1' except for setting 'maxForks = 4' for Unicycler
     - Same 5 total cpus **and** 5 genomes * 1 cpus * 4 forks = 20 total cpus possible for **Unicycler alone**
 - It is recommended to leave all 'cpus = 1' and all 'maxFork = 1' until you have become familiar with the scale of your project
-- **Further development on mitigating total cpu and memory usage is coming soon...**
+
 
