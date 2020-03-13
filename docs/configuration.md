@@ -12,7 +12,7 @@ adapters = "containers/data/adapters/nextera.fa"
 ### Output Directory
 ```
 /* Output directory */
-output = "./temp/output"
+output = "/temp/output"
 ```
 
 ### Number of Threads
