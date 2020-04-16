@@ -32,7 +32,7 @@ EcoliK12_MG1655_U00096.3.fna EcoliK12_MG1655_U00096.3.gff
 ```
 $ cd ..
 $ nano input_tutorial.csv
-Sample_MinION_Ecoli,default,containers/Test_Data/fastq/Sample1_MinION.fastq.gz,containers/Test_Data/fastq/Illumina_Test_R1.fastq.gz,containers/Test_Data/fastq/Illumina_Test_R2.fastq.gz,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.fna,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.gff
+Sample_MinION_Ecoli,default,containers/Test_Data/fastq/MinION.fastq.gz,containers/Test_Data/fastq/Illumina_Test_R1.fastq.gz,containers/Test_Data/fastq/Illumina_Test_R2.fastq.gz,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.fna,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.gff
 Sample_PacBio_Ecoli,default,containers/Test_Data/fastq/PacBio_Test.fastq.gz,containers/Test_Data/fastq/Illumina_Test_R1.fastq.gz,containers/Test_Data/fastq/Illumina_Test_R2.fastq.gz,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.fna,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.gff
 ```
 Note:
