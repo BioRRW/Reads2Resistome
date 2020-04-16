@@ -1,0 +1,32 @@
+[phastaf] Hello reedrich
+[phastaf] You ran: /home/reedrich/anaconda3/bin/phastaf --outdir phastaf_test/ IC4-1X-M3237-19-0109_contigs.fasta --force
+[phastaf] This is phastaf 0.1.0
+[phastaf] Written by Torsten Seemann et al
+[phastaf] Homepage is https://github.com/tseemann/phastaf
+[phastaf] Operating system is linux
+[phastaf] Perl version is v5.26.2
+[phastaf] Machine has 8 CPU cores
+[phastaf] Using any2fasta - /home/reedrich/anaconda3/bin/any2fasta | any2fasta 0.4.2
+[phastaf] Using bedtools - /home/reedrich/anaconda3/bin/bedtools | bedtools v2.29.2
+[phastaf] Using diamond - /home/reedrich/anaconda3/bin/diamond | diamond version 0.9.14
+[phastaf] Using sort - /home/reedrich/anaconda3/bin/sort | sort (GNU coreutils) 8.25
+[phastaf] Forced overwrite of existing --outdir phastaf_test/
+[phastaf] Changing into folder: /home/reedrich/PhD_Research/Reads2Resistome/containers/Test_Data/phastaf_test
+[phastaf] Running: (any2fasta /home/reedrich/PhD_Research/Reads2Resistome/containers/Test_Data/IC4-1X-M3237-19-0109_contigs.fasta > contigs.fna) 2>&1 | sed 's/^/[any2fasta] /' | tee -a phastaf.log
+[any2fasta] This is any2fasta 0.4.2
+[any2fasta] Opening '/home/reedrich/PhD_Research/Reads2Resistome/containers/Test_Data/IC4-1X-M3237-19-0109_contigs.fasta'
+[any2fasta] Detected FASTA format
+[any2fasta] Read 89845 lines from '/home/reedrich/PhD_Research/Reads2Resistome/containers/Test_Data/IC4-1X-M3237-19-0109_contigs.fasta'
+[any2fasta] Wrote 13 sequences from FASTA file.
+[any2fasta] Processed 1 files.
+[any2fasta] Done.
+[phastaf] Running: (diamond blastx --threads 1 --query contigs.fna --db /home/reedrich/anaconda3/db/phastaf.dmnd --id 75 --outfmt 6 qseqid qstart qend sseqid pident -k 0 --evalue 1E-6 --query-gencode 11 > diamond.coords) 2>&1 | sed 's/^/[diamond] /' | tee -a phastaf.log
+[diamond] Error: Database was built with a different version of diamond as is incompatible.
+[phastaf] Running: (bedtools merge -i diamond.coords.bed -d 2000 -c 1 -o count > phage.bed) 2>&1 | sed 's/^/[bedtools] /' | tee -a phastaf.log
+[bedtools] 
+[bedtools] *****
+[bedtools] ***** ERROR: Requested column 1, but database file diamond.coords.bed only has fields 1 - 0.
+[phastaf] Wrote: phage.bed
+[phastaf] Walltime used: 0 min 1 sec
+[phastaf] Have a suggestion for phastaf? Tell me at https://github.com/tseemann/phastaf/issues
+[phastaf] Done.
