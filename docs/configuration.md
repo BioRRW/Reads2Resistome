@@ -30,12 +30,6 @@ slidingwindow = "4:15"
 minlen = 36
 ```
 
-### ARIBA Parameters
-**More than one thread for each ARIBA process is NOT recommnded**
-```
-/* ARIBA */
-ariba_threads = 1
-```
 ### Unicycler Parameters
 ```
 /* Unicycler parameters */
