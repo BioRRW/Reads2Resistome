@@ -3,11 +3,15 @@ Dependencies
 
 R2R uses a variety of open-source tools. The tools used, descriptions, and version specifics are provided below.
 
-### ARIBA
-  - Description: Antimicrobial Resistance Identification By Assembly.
-  - Version: 2.1.4
-  - Source: https://github.com/sanger-pathogens/ariba
+### ABRICATE
+  - Description: Mass screening of contigs for antimicrobial and virulence genes.
+  - Version: 1.0.0
+  - Source: https://github.com/tseemann/abricate
 
+### ARG-ANNOT
+  - Description: Detect existing and putative new antibiotic resistance (AR) genes in bacterial genomes.
+  - Source: http://backup.mediterranee-infection.com/article.php?laref=282&titre=arg-annot
+  
 ### Bandage
   - Description: Bioinformatics Application for Navigating De novo Assembly Graphs Easily.
   - Version: 0.8.1
@@ -35,7 +39,6 @@ R2R uses a variety of open-source tools. The tools used, descriptions, and versi
   
 ### Comprehensive Antibiotic Resistance Database 
   - Description: A bioinformatic database of resistance genes, their products and associated phenotypes.
-  - Version: 3.0.7
   - Source: https://card.mcmaster.ca/ 
 
 ### Conda
@@ -55,13 +58,16 @@ R2R uses a variety of open-source tools. The tools used, descriptions, and versi
 
 ### MEGARes Database
   - Description: an Antimicrobial Database for High-Throughput Sequencing.
-  - Version: 2.0.0
   - Source: https://megares.meglab.org/
   
 ### MultiQC
   - Description: MultiQC is a tool that utilizes software logs to create html reports.
   - Version: 1.0
   - DOI: https://doi.org/10.1093/bioinformatics/btw354
+
+### Bacterial Antimicrobial Resistance Reference Gene Database (NCBI)
+  - Description: Bioproject contains annotated sequence records for representative DNA sequences that encode proteins conferring or contributing to resistance to various antibiotics.
+  - Source: https://www.ncbi.nlm.nih.gov/bioproject/PRJNA313047
 
 ### NanoPlot
   - Description: Plotting scripts for long read sequencing data.
@@ -75,7 +81,6 @@ R2R uses a variety of open-source tools. The tools used, descriptions, and versi
   
 ### Plasmid Finder Database
   - Description: Plasmid identification.
-  - Version: 2.1
   - Source: https://cge.cbs.dtu.dk/services/PlasmidFinder/
   
 ### Prokka
@@ -87,6 +92,10 @@ R2R uses a variety of open-source tools. The tools used, descriptions, and versi
   - Description: QUAST is a quality assessment tool for evaluating genome assemblies.
   - Version: 4.5
   - DOI: https://doi.org/10.1093/bioinformatics/btt086
+
+### ResFinder Database
+  - Description: Identifies acquired antimicrobial resistance genes and/or chromosomal mutations in total or partial sequenced isolates of bacteria.
+  - Source: https://cge.cbs.dtu.dk/services/ResFinder/
   
 ### Roary  
   - Description: High speed stand alone pan genome pipeline 
@@ -97,11 +106,6 @@ R2R uses a variety of open-source tools. The tools used, descriptions, and versi
   - Description: Samtools is a program for manipulating and extracting useful information from alignment files in SAM or BAM format.
   - Version: 1.4.1
   - DOI: https://doi.org/10.1093/bioinformatics/btp352
-
-### Unicycler
-  - Description: Unicycler is an assembly pipeline for bacterial genomes.
-  - Version: 0.4.8
-  - Source: https://github.com/rrwick/Unicycler
 
 ### SISTR
   - Description: Serovar predictions from whole-genome sequence assemblies by determination of antigen gene and cgMLST gene                     alleles using BLAST.
@@ -120,9 +124,13 @@ R2R uses a variety of open-source tools. The tools used, descriptions, and versi
   
 ### Virulence Finder Database
   - Description: Identification of virulence factors
-  - Version: 2.0
-  - Source: https://cge.cbs.dtu.dk/services/VirulenceFinder/  
+  - Source: http://www.mgc.ac.cn/VFs/
   
+### Unicycler
+  - Description: Unicycler is an assembly pipeline for bacterial genomes.
+  - Version: 0.4.8
+  - Source: https://github.com/rrwick/Unicycler  
+
 ### 
   - Description:
   - Version:
