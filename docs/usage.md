@@ -45,8 +45,8 @@ $ nextflow R2R.nf --help
                                 normal = moderate contig size and misassembly rate
                                 bold = longest contigs, higher misassembly rate                              
     Annotation: 
-        --ariba_run     STR     (default: true)
-                                false = ARIBA will not run
+        --abricate_run     STR     (default: true)
+                                false = ABRICATE will not run
         --prokka_run    STR     (default: true)
                                 false = Prokka will not run
                                     
