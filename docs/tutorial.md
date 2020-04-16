@@ -53,27 +53,27 @@ $ cd ~/Reads2Resistome
 
 Default hybrid pipeline:
 ```
-$ nextflow R2R.nf  --input "containers/Test_Data/input_tutorial.csv " --output "temp/output_hybrid" -w "temp/work_hybrid"
+$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --output "temp/output_hybrid" -w "temp/work_hybrid"
 ```
 Nonhybrid pipeline:
 ```
-$ nextflow R2R.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
+$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
 ```
 longread pipeline:
 ```
-$ nextflow R2R.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly longread --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
+$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly longread --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
 ```
 Note: 
 - Output (--output) directories and Nextflow working directory (-w) are kept separate.
  
-### You will see the nextflow processes and their progress (nonhybrid run):
+### You will see the nextflow processes and their progress (hybrid run):
 ```
 N E X T F L O W  ~  version 19.10.0
 Launching `<NAME>` [maniac_dalembert] - revision: fc615a5471
-[cb/f8b4ca] process > FastQC (Sample1)          [100%] 1 of 1 ✔
-[-        ] process > Nanoplot                    -
-[e3/4abe31] process > preMultiQC                [100%] 1 of 1 ✔
-[e6/608605] process > Dedupe (Sample1)          [100%] 1 of 1 ✔
+[22/3c9e93] process > FastQC (EC_IC4_2X_MinION)   [100%] 2 of 2 ✔
+[6f/1371d1] process > Nanoplot (EC_IC4_2X_PacBio) [  0%] 0 of 1
+[-        ] process > preMultiQC                  -
+[de/cc10e5] process > Dedupe (EC_IC4_2X_MinION)   [  0%] 0 of 2
 [-        ] process > QualityControl              -
 [-        ] process > postFastQC                  -
 [-        ] process > postMultiQC                 -
@@ -85,56 +85,28 @@ Launching `<NAME>` [maniac_dalembert] - revision: fc615a5471
 [-        ] process > Phigaro                     -
 [-        ] process > SISTR                       -
 [-        ] process > Prokka                      -
+[-        ] process > ABRICATE                    -
+
 
 ```
 Nextflow creates random names for the runs, 'maniac_dalembert'.
-Each process states the sub-woring directory, for example: [cb/f8b4ca] (ie ~/temp/work_nonhybrid/cb/f8b4ca...)
+Each process states the sub-woring directory, for example: [22/3c9e93] (ie ~/temp/work_nonhybrid/cb/f8b4ca...)
 
 ### Once complete you will see something similar to this:
 ```
 N E X T F L O W  ~  version 19.10.0
 Launching `R2R` [maniac_dalembert] - revision: fc615a5471
-[a1/200c57] process > FastQC (Sample1)          [100%] 1 of 1 ✔
-[-        ] process > Nanoplot                    -
-[86/afce62] process > preMultiQC                [100%] 1 of 1 ✔
-[20/cf1b54] process > Dedupe (Sample1)          [100%] 1 of 1 ✔
-[b9/6b50e4] process > QualityControl (Sample1)  [100%] 1 of 1 ✔
-[a5/02eb57] process > postFastQC (Sample1)      [100%] 1 of 1 ✔
-[54/1304b4] process > postMultiQC               [100%] 1 of 1 ✔
-[3d/1b407b] process > Unicycler (Sample1)       [100%] 1 of 1 ✔
-[a9/aed765] process > BAM (Sample1)             [100%] 1 of 1 ✔
-[6d/99fadd] process > QUAST (Sample1)           [100%] 1 of 1 ✔
-[82/4296d7] process > QUASTMultiQC              [100%] 1 of 1 ✔
-[90/f2df15] process > Bandage (Sample1)         [100%] 1 of 1 ✔
-[-        ] process > SISTR                       -
-[fb/0b1341] process > Prokka (Sample1)          [100%] 1 of 1 ✔
-Completed at: 25-Feb-2020 20:20:32
-Duration    : 32m 11s
-CPU hours   : 123.7 
-Succeeded   : 12
+<insert after completion> 
 ```
-Processes which are not used (NanoPlot and SISTR) will show no completion or any working directory information.
+
 
 ### Understanding the working directory and the -resume option:
 Run the exact command again and observe:
 ```
-$ nextflow R2R.nf  --input "containers/Test_Data/input_3_Samples.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
+$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --output "temp/output_hybrid" -w "temp/work_hybrid"
 N E X T F L O W  ~  version 19.10.0
 Launching `mixtisque-4.0.1.nf` [intergalactic_engelbart] - revision: c74303a777
-[a1/200c57] process > FastQC (Sample1)          [100%] 1 of 1, cached: 1 ✔
-[-        ] process > Nanoplot                    -
-[86/afce62] process > preMultiQC                [100%] 1 of 1, cached: 1 ✔
-[20/cf1b54] process > Dedupe (Sample1)          [100%] 1 of 1, cached: 1 ✔
-[b9/6b50e4] process > QualityControl (Sample1)  [100%] 1 of 1, cached: 1 ✔
-[a5/02eb57] process > postFastQC (Sample1)      [100%] 1 of 1, cached: 1 ✔
-[54/1304b4] process > postMultiQC               [100%] 1 of 1, cached: 1 ✔
-[3d/1b407b] process > Unicycler (Sample1)       [100%] 1 of 1, cached: 1 ✔
-[a9/aed765] process > BAM (Sample1)             [100%] 1 of 1, cached: 1 ✔
-[6d/99fadd] process > QUAST (Sample1)           [100%] 1 of 1, cached: 1 ✔
-[82/4296d7] process > QUASTMultiQC              [100%] 1 of 1, cached: 1 ✔
-[90/f2df15] process > Bandage (Sample1)         [100%] 1 of 1, cached: 1 ✔
-[-        ] process > SISTR                       -
-[fb/0b1341] process > Prokka (Sample1)          [100%] 1 of 1, cached: 1 ✔
+<insert after completion> 
 ```
 The process finished immediately because all of the processes are cached within the nextflow working directory. Even if you delete the output files (ie: rm -r /temp/output), all of the information is still retained within the working directory.
 **Failure to maintain the working directory can quickly acummulate lots of data.**
