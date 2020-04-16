@@ -3,7 +3,8 @@ Process Overview
 
 ### NanoPlot
 (description)
-(sample image)
+
+![nanoplot](images/nanoplot.png)
 
 ### FastQC
 (description)
@@ -24,6 +25,22 @@ Process Overview
 ### Bandage
 (description)
 (sample image)
+
+### Phigaro
+(description)
+(sample image)
+
+### ABRICATE
+(description)
+(sample image)
+
+### SISTR
+(description)
+(sample image)
+
+### MultiQC
+(description)
+
 
 
 
