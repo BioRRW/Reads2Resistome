@@ -6,33 +6,37 @@ Process Overview
 
 ![nanoplot](images/nanoplot.png)
 
-### FastQC
-(description)
-(sample image)
-
 ### Trimmomatic
 (description)
-(sample image)
 
-### SPAdes
+### FastQC
 (description)
-(sample image)
+![nanoplot](images/fastqc.png)
+![nanoplot](images/fastqc_multiqc.png)
+
+### Unicycler
+(description)
+![nanoplot](images/unicycler.png)
 
 ### QUAST
 (description)
-(sample image)
+![nanoplot](images/quast.png)
 
 ### Bandage
 (description)
-(sample image)
+![nanoplot](images/bandage.svg)
+
+### Prokka
+(description)
+![nanoplot](images/prokka.png)
 
 ### Phigaro
 (description)
-(sample image)
+![nanoplot](images/phigaro.png)
 
 ### ABRICATE
 (description)
-(sample image)
+![nanoplot](images/abricate.png)
 
 ### SISTR
 (description)
@@ -40,7 +44,6 @@ Process Overview
 
 ### MultiQC
 (description)
-
 
 
 
