@@ -4,6 +4,7 @@ Installation
 To run the pipeline, you will need Nextflow and the appropriate Singularity containers.
 
 ### Step 1 -- Download and install Nextflow
+Follow the link for operating system specific installation instructions: [Nextflow](https://www.nextflow.io/docs/latest/getstarted.html)
 ```
 $ curl -fsSL get.nextflow.io | bash
 $ ./nextflow
