@@ -12,7 +12,7 @@ $ cd containers/Test_Data/
 You should see two directories and two files
 ```
 $ ls
-fastq references input_tutorial.csv R2R.nf
+fastq references input_tutorial.csv R2R-0.0.1.nf
 ```
 fastq folder contains four gzipped files
 Unzip the .fastq.gz files
@@ -28,7 +28,7 @@ $ ls references/
 EcoliK12_MG1655_U00096.3.fna EcoliK12_MG1655_U00096.3.gff 
 ```
 
-### Take a look at the input.csv file
+### Take a look at the input_tutorial.csv file
 ```
 $ cd ..
 $ nano input_tutorial.csv
@@ -54,15 +54,15 @@ $ cd ~/Reads2Resistome
 
 Default hybrid pipeline:
 ```
-$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --output "temp/output_hybrid" -w "temp/work_hybrid"
+$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --output "temp/output_hybrid" -w "temp/work_hybrid" --name Tutorial_Hybrid
 ```
 Nonhybrid pipeline:
 ```
-$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
+$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid" --name Tutorial_Nonhybrid
 ```
 longread pipeline:
 ```
-$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly longread --output "temp/output_nonhybrid" -w "temp/work_nonhybrid"
+$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly longread --output "temp/output_nonhybrid" -w "temp/work_nonhybrid" --name Tutorial_Long_Read
 ```
 Note: 
 - Here we will run the default hybrid pipeline, feel free to run nonhybrid and longread assemblies as well.
