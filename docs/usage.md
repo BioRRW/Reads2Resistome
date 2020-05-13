@@ -25,7 +25,7 @@ $ nextflow R2R-0.0.1.nf --help
         --output        STR     Path to output directory
    
 ## Full list of command line options
-    usage: nextflow R2R.nf [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--threads] [--Name] [-resume]
+    usage: nextflow R2R-0.0.1.nf [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--threads] [--Name] [-resume]
 
     General:
         --help            This help
