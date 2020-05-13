@@ -31,7 +31,7 @@ As output, this module produces four outputs:
   - sample.2P.fastq
   - sample.1U.fastq
   - sample.2U.fastq
-
+  
 
 #### Module Unicycler
 
