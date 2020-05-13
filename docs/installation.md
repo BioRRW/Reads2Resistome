@@ -3,20 +3,24 @@ Installation
 
 To run the pipeline, you will need Nextflow and the appropriate Singularity containers.
 
-### Step 1 -- Download Nextflow
+### Step 1 -- Download and install Nextflow
 ```
 $ curl -fsSL get.nextflow.io | bash
 $ ./nextflow
 $ mv nextflow /usr/local/bin
 ```
 
-### Step 2 -- Download Source Code
+### Step 2 -- Download and install Singularity
+Follow the link to find installation instructions for your specific operating system:
+[Singularity](https://singularity.lbl.gov/all-releases)
+
+### Step 3 -- Download Source Code
 ```
 $ git clone https://github.com/BioRRW/Reads2Resistome.git
 $ cd Reads2Resistome
 ```
 
-### Step 3 -- Download Singularity Containers into the containers folder
+### Step 4 -- Download Singularity Containers into the containers folder
 Navigate to /Reads2Resistome/containers: 
 ```
 cd Reads2Resistome/containers
@@ -42,7 +46,7 @@ ls
 R2R_Main-0.0.1.simg R2R_ABRICATE-0.0.1.simg R2R_Phigaro-0.0.1.simg
 ```
 
-### Step 4 -- Run a Test
+### Step 5 -- Run a Test
 ```
 nextflow R2R-0.0.1.nf --help
 ```
