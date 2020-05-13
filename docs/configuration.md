@@ -2,6 +2,7 @@ Configuration
 -------------
 
 To modify default parameters: open the nextflow.config file 
+Using the command line '--options' will overrride the defaults set in the configuration file.
 
 ### Adapter Sequences
 ```
