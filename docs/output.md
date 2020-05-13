@@ -10,7 +10,7 @@ It is advised to copy the files into a separate location to prevent overwriting 
 cp -rL /temp/output/* ~/<desired_location>
 ```
 ### Overview of output directories and contents
-![output_dirs](images/)
+![output_dirs](images/output_dirs.png)
 
 
 #### Module FastQC
