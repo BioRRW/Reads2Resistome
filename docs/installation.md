@@ -1,7 +1,7 @@
 Installation
 ------------
 
-To run the pipeline, you will need Nextflow and the appropriate Docker containers.
+To run the pipeline, you will need Nextflow and the appropriate Singularity containers.
 
 ### Step 1 -- Download Nextflow
 ```
