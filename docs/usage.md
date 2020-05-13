@@ -3,9 +3,9 @@ Usage
 
 ### Quick Start Example
 
-To run hybrid against a Ecoli database with approximately 16 threads:
+To hybrid-assemble the tutorial sample data against a Ecoli database with approximately 16 threads:
 ```
-nextflow R2R-0.0.1.nf  --input "containers/data/raw/input_tutorial.csv " --assembly hybrid --output "temp/output" -w "temp/work" --name R2R_Sample_Hybrid_Assembly
+nextflow R2R-0.0.1.nf  --input "containers/data/raw/input_tutorial.csv " --assembly hybrid --threads 16 --output "temp/output" -w "temp/work" --name R2R_Sample_Hybrid_Assembly
 ```
 
 ### Display Help Message
