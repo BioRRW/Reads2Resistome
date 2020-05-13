@@ -9,6 +9,9 @@ It is advised to copy the files into a separate location to prevent overwriting 
 ```
 cp -rL /temp/output/* ~/<desired_location>
 ```
+### Overview of output directories and contents
+![output_dirs](images/output_dirs.png)
+
 
 #### Module FastQC
 FastQC produces html reports for raw sequence data in FASTQ format. These reports include content related to:
