@@ -18,7 +18,7 @@ $ nextflow R2R-0.0.1.nf --help
 ## Required command line parameters
     Nextflow Parameters:
         -w              STR     Path to Nextflow working directory
-        --Name          STR     Name of current Nextflow run
+        --name          STR     Name of current Nextflow run
     Input/Output:
         --input         STR     Path to input (.csv) file 
                                     (*See Input (.csv) File Requirements for details)
