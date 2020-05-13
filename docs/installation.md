@@ -26,8 +26,7 @@ sudo make install
 
 ### Step 3 -- Download Source Code
 ```
-$ git clone https://github.com/BioRRW/Reads2Resistome.git
-$ cd Reads2Resistome
+git clone https://github.com/BioRRW/Reads2Resistome.git
 ```
 
 ### Step 4 -- Download Singularity Containers into the containers folder
