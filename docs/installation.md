@@ -14,6 +14,15 @@ $ mv nextflow /usr/local/bin
 ### Step 2 -- Download and install Singularity
 Follow the link to find installation instructions for your specific operating system:
 [Singularity](https://singularity.lbl.gov/all-releases)
+```
+VERSION=2.5.2
+wget https://github.com/singularityware/singularity/releases/download/$VERSION/singularity-$VERSION.tar.gz
+tar xvf singularity-$VERSION.tar.gz
+cd singularity-$VERSION
+./configure --prefix=/usr/local
+make
+sudo make install
+```
 
 ### Step 3 -- Download Source Code
 ```
