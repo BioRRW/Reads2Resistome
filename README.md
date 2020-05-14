@@ -1,6 +1,6 @@
 :warning: **THIS PIPELINE IS STILL IN EARLY DEVELOPMENT!**
 
-R2R : Reads2Resistome 
+:shield: :pill: R2R : Reads2Resistome :crossed_swords: :dna:
 ---------
 Hybrid and non-hybrid whole genome assembler with resistome identification for Illumina, Nanopore and PacBio reads.
 
