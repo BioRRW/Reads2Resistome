@@ -21,14 +21,21 @@ Documentation
   - [Contact](https://github.com/BioRRW/Reads2Resistome/blob/master/docs/contact.md)
   - [Acknowledgements](https://github.com/BioRRW/Reads2Resistome/blob/master/docs/acknowledgements.md)
 
-Support and Contact
+Acknowledgements
+----------------
+
+- [nf-core] for pipeline adaption 
+  - https://nf-co.re/
+- USDA-ARS/ORISE for funding 
+  - https://orise.orau.gov/usda-ars/
+- [@lakinsm] for repository structure adaption
+  - https://github.com/lakinsm/bear-wgs
+  
+  Support and Contact
 -------------------
 Reads2Resistome is developed at Colorado State University within the Abdo Lab.
 For any issues or concerns, please contact us at EMAIL_HERE
 
 Developers
 ----------
-Reed Woyda
-
-References
-----------
+Reed Woyda 
