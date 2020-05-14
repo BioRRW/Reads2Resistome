@@ -1,13 +1,13 @@
 Software Requirements
 ---------------------
-You will need the following libraries and tools installed on your server or local machine.
 
-  - Docker (Optional)
-    - Windows users should download the [Stable channel](https://docs.docker.com/docker-for-windows/) release.
-    - MAC users should download the [Stable channel](https://docs.docker.com/docker-for-mac/) release.
-    - Linux users can [download](https://docs.docker.com/engine/installation/) the most appropriate version for their Linux distribution.
-  - Java 7+ (Required)
-  - Nextflow (Required)
-  
-NOTE: If you choose not to install Docker, you will need to download each of the required dependencies and add the executable paths to your .bashrc file to run the pipeline. A list of these dependencies can be found in the [Dependencies](https://github.com/cdeanj/auir/blob/master/docs/dependencies.md) section of this document.y
+### Nextflow
+Follow the link for operating system specific installation instructions: 
+[Nextflow](https://www.nextflow.io/docs/latest/getstarted.html)
 
+### Singularity
+Follow the link to find installation instructions for your specific operating system:
+[Singularity](https://singularity.lbl.gov/all-releases)
+
+### Java 7+
+[Java](https://java.com/en/download/help/download_options.xml)
