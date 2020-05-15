@@ -1,0 +1,58 @@
+Bootstrap: debootstrap
+OSVersion: bionic
+MirrorURL:  http://us.archive.ubuntu.com/ubuntu
+##############################################################
+# ABRICATE container for Reads2Resistome
+##############################################################
+%files
+    # containers/data/databases/pvog /opt
+%post
+    mv /etc/apt/sources.list /etc/apt/sources.list.bak
+    echo "deb http://fr.archive.ubuntu.com/ubuntu/ bionic main restricted
+    deb http://fr.archive.ubuntu.com/ubuntu/ bionic-updates main restricted
+    deb http://fr.archive.ubuntu.com/ubuntu/ bionic universe
+    deb http://fr.archive.ubuntu.com/ubuntu/ bionic-updates universe
+    deb http://fr.archive.ubuntu.com/ubuntu/ bionic multiverse
+    deb http://fr.archive.ubuntu.com/ubuntu/ bionic-updates multiverse
+    deb http://fr.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
+    deb http://security.ubuntu.com/ubuntu bionic-security main restricted
+    deb http://security.ubuntu.com/ubuntu bionic-security universe
+    deb http://security.ubuntu.com/ubuntu bionic-security multiverse" >> /etc/apt/sources.list
+    # Define variables
+
+    # Install Dependencies
+    apt-get update && apt-get install -y \
+    build-essential \
+    autoconf \
+    automake \
+    wget \
+    unzip \
+    git \
+    gcc \
+    make \
+    perl \
+    bioperl \
+    libpath-tiny-perl \
+    libbz2-dev \
+    zlib1g-dev \
+    libncurses5-dev \
+    libncursesw5-dev \
+    liblzma-dev 
+    apt-get update -y
+    apt-get upgrade -y
+    
+    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/miniconda
+    export PATH=/opt/miniconda/bin:$PATH
+    conda config --add channels anaconda
+    conda config --add channels conda-forge
+    conda config --add channels defaults
+    conda config --add channels bioconda
+    conda config --add channels r
+    conda update -n base -c defaults conda
+    
+    conda install -c conda-forge -c bioconda -c defaults abricate
+    
+    cd /opt
+    git clone https://github.com/tseemann/any2fasta.git
+    cp any2fasta/any2fasta /usr/local/bin

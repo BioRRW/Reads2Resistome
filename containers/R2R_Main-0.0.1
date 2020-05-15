@@ -1,0 +1,174 @@
+Bootstrap: debootstrap
+OSVersion: bionic
+MirrorURL:  http://us.archive.ubuntu.com/ubuntu
+##############################################################
+# Singularity_Mixtisque.0.1: BBMAP added, MGEfidner removed
+##############################################################
+%files
+    containers/data/references /opt
+    containers/data/databases/Ecoli.tar.xz /opt
+    containers/data/databases/Salmonella.tar.xz /opt
+    containers/data/databases/Efaecalis.tar.xz /opt
+    containers/data/databases/Campy.tar.xz /opt
+    containers/data/databases/Staph.tar.xz /opt
+%post
+    mv /etc/apt/sources.list /etc/apt/sources.list.bak
+    echo "deb http://fr.archive.ubuntu.com/ubuntu/ bionic main restricted
+    deb http://fr.archive.ubuntu.com/ubuntu/ bionic-updates main restricted
+    deb http://fr.archive.ubuntu.com/ubuntu/ bionic universe
+    deb http://fr.archive.ubuntu.com/ubuntu/ bionic-updates universe
+    deb http://fr.archive.ubuntu.com/ubuntu/ bionic multiverse
+    deb http://fr.archive.ubuntu.com/ubuntu/ bionic-updates multiverse
+    deb http://fr.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
+    deb http://security.ubuntu.com/ubuntu bionic-security main restricted
+    deb http://security.ubuntu.com/ubuntu bionic-security universe
+    deb http://security.ubuntu.com/ubuntu bionic-security multiverse" >> /etc/apt/sources.list
+    # Define variables
+    APP_NAME="Trimmomatic"
+    VERSION="0.39"
+    DEST="/opt/${APP_NAME}-${VERSION}"
+    PATH="${PATH}:${DEST}"
+    APP_NAME_FASTQC="FastQC"
+    VERSION_FASTQC="0.11.8"
+    APP_NAME_BANDAGE="Bandage"
+    VERSION_BANDAGE="0.8.1"
+    APP_NAME_QUAST="quast"
+    VERSION_QUAST="5.0.2"    
+    APP_NAME_Unicycler="Unicycler"
+    VERSION_Unicycler="0.4.8"
+    APP_NAME_SPAdes="SPAdes"
+    VERSION_SPAdes="3.11.1"    
+    APP_NAME_Bowtie2="bowtie2"
+    VERSION_Bowtie2="2.3.3.1"    
+    APP_NAME_samtools="samtools"
+    VERSION_samtools="1.3.1"
+    APP_NAME_BLAST="blast"
+    VERSION_BLAST="2.9.0"
+    VERSION_pilon="1.23"
+    APP_NAME_BBMAP="bbmap"
+    VERSION_BBMAP="38.79"
+    APP_NAME_PROKKA="Prokka"
+    VERSION_PROKKA="1.14.5"
+    DEST_PROKKA="/opt/${APP_NAME}-${VERSION}"
+    PATH_PROKKA="${PATH}:${DEST}"
+    apt-get update && apt-get install -y build-essential autoconf automake libtool gdb wget unzip perl libdatetime-perl libxml-simple-perl libdigest-md5-perl libncurses5-dev libncursesw5-dev bioperl python3-pip hmmer prodigal locate zlib1g-dev pkg-config libfreetype6-dev libpng-dev python-matplotlib python-setuptools bowtie2 mummer cd-hit git-all bedtools libbz2-dev liblzma-dev mcl parallel cpanminus prank mafft libexpat1-dev fasttree cmake qtcreator libc6-dev openjdk-8-jre
+    apt-get update -y
+    apt-get upgrade -y
+    # Install Trimmomatic
+    cd /opt
+    wget -O ${APP_NAME}-${VERSION}.zip http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-$VERSION.zip
+    unzip ${APP_NAME}-${VERSION}.zip
+    rm -f ${APP_NAME}-${VERSION}.zip
+    # Install FastQC
+    cd /opt
+    wget -O ${APP_NAME_FASTQC}-${VERSION_FASTQC}.zip https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v${VERSION_FASTQC}.zip --no-check-certificate
+    unzip ${APP_NAME_FASTQC}-${VERSION_FASTQC}.zip
+    chmod 755 /opt/FastQC/fastqc
+    ln -s /opt/FastQC/fastqc /usr/local/bin/fastqc
+    rm -f ${APP_NAME_FASTQC}-${VERSION_FASTQC}.zip
+    # Install QUAST
+    cd /opt
+    wget -O ${APP_NAME_QUAST}-${VERSION_QUAST}.tar.gz https://downloads.sourceforge.net/project/quast/quast-${VERSION_QUAST}.tar.gz
+    tar -xzf ${APP_NAME_QUAST}-${VERSION_QUAST}.tar.gz
+    rm -f ${APP_NAME_QUAST}-${VERSION_QUAST}.tar.gz
+    chmod 755 ${APP_NAME_QUAST}-${VERSION_QUAST}
+    cd ${APP_NAME_QUAST}-${VERSION_QUAST}
+    ./setup.py install
+    mv /opt/references .
+    chmod 755 quast_libs
+    chmod 755 setup.py
+    chmod 755 quast.py
+    # Install Cython
+    pip3 install Cython
+    # Install Roary
+    cpanm -f Bio::Roary
+    # Install BLAST+
+    cd /opt
+    wget -O ${APP_NAME_BLAST}-${VERSION_BLAST}.tar.gz ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/$VERSION_BLAST/ncbi-blast-$VERSION_BLAST+-x64-linux.tar.gz
+    tar -xvf ${APP_NAME_BLAST}-${VERSION_BLAST}.tar.gz
+    rm -f ${APP_NAME_BLAST}-${VERSION_BLAST}.tar.gz
+    cd /opt
+    wget -N ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools/converters/by_program/tbl2asn/linux64.tbl2asn.gz
+    gunzip linux64.tbl2asn.gz
+    mv linux64.tbl2asn /opt/ncbi-blast-2.9.0+/bin/tbl2asn
+    cd /opt
+    wget -O ${APP_NAME_SPAdes}-${VERSION_SPAdes}.tar.gz http://cab.spbu.ru/files/release3.11.1/SPAdes-$VERSION_SPAdes-Linux.tar.gz
+    tar -xzf ${APP_NAME_SPAdes}-${VERSION_SPAdes}.tar.gz
+    rm -f ${APP_NAME_SPAdes}-${VERSION_SPAdes}.tar.gz
+    cd /opt
+    git clone --recursive https://github.com/isovic/racon.git racon
+    cd racon
+    mkdir build
+    cd build
+    cmake -DCMAKE_BUILD_TYPE=Release ..
+    make
+    cd /opt
+    wget -O ${APP_NAME_Bowtie2}-${VERSION_Bowtie2}.zip https://sourceforge.net/projects/bowtie-bio/files/bowtie2/$VERSION_Bowtie2/bowtie2-$VERSION_Bowtie2-linux-x86_64.zip/download
+    unzip ${APP_NAME_Bowtie2}-${VERSION_Bowtie2}.zip
+    rm -f ${APP_NAME_Bowtie2}-${VERSION_Bowtie2}.zip
+    cd /opt
+    wget -O ${APP_NAME_samtools}-${VERSION_samtools}.zip.bz2 https://github.com/samtools/samtools/releases/download/$VERSION_samtools/samtools-$VERSION_samtools.tar.bz2
+    tar -xjvf ${APP_NAME_samtools}-${VERSION_samtools}.zip.bz2
+    rm -f ${APP_NAME_samtools}-${VERSION_samtools}.zip.bz2
+    cd ${APP_NAME_samtools}-${VERSION_samtools}
+    make
+    make install
+    cd /opt
+    wget https://github.com/broadinstitute/pilon/releases/download/v$VERSION_pilon/pilon-$VERSION_pilon.jar    # Install Unicycler
+    cd /opt
+    git clone https://github.com/rrwick/Unicycler.git
+    cd $APP_NAME_Unicycler
+    python3 setup.py install
+    cd /opt
+    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/miniconda
+    export PATH=/opt/miniconda/bin:$PATH
+    conda config --add channels anaconda
+    conda config --add channels conda-forge
+    conda config --add channels defaults
+    conda config --add channels bioconda
+    conda config --add channels r
+    conda update -n base -c defaults conda
+    cd /usr/bin
+    ln -s /opt/ncbi-blast-2.9.0+/bin/tbl2asn
+    rm -r blastp
+    rm -r makeblastdb
+    ln -s /opt/ncbi-blast-2.9.0+/bin/blastp
+    ln -s /opt/ncbi-blast-2.9.0+/bin/makeblastdb
+    cd /opt
+        git clone https://github.com/tseemann/prokka.git prokka
+        mv /opt/Ecoli.tar.xz /opt/prokka/db/genus/
+        mv /opt/Salmonella.tar.xz /opt/prokka/db/genus/
+        mv /opt/Efaecalis.tar.xz /opt/prokka/db/genus/
+        mv /opt/Campy.tar.xz /opt/prokka/db/genus/
+        mv /opt/Staph.tar.xz /opt/prokka/db/genus/
+        xz -d /opt/prokka/db/genus/Ecoli.tar.xz
+        xz -d /opt/prokka/db/genus/Salmonella.tar.xz
+        xz -d /opt/prokka/db/genus/Efaecalis.tar.xz
+        xz -d /opt/prokka/db/genus/Campy.tar.xz
+        xz -d /opt/prokka/db/genus/Staph.tar.xz
+        tar -xvf /opt/prokka/db/genus/Ecoli.tar -C /opt/prokka/db/genus/
+        tar -xvf /opt/prokka/db/genus/Salmonella.tar -C /opt/prokka/db/genus/
+        tar -xvf /opt/prokka/db/genus/Efaecalis.tar -C /opt/prokka/db/genus/
+        tar -xvf /opt/prokka/db/genus/Campy.tar -C /opt/prokka/db/genus/
+        tar -xvf /opt/prokka/db/genus/Staph.tar -C /opt/prokka/db/genus/
+        rm /opt/prokka/db/genus/Ecoli.tar
+        rm /opt/prokka/db/genus/Salmonella.tar
+        rm /opt/prokka/db/genus/Efaecalis.tar
+        rm /opt/prokka/db/genus/Campy.tar
+        rm /opt/prokka/db/genus/Staph.tar
+    /opt/prokka/bin/prokka --setupdb
+    conda install -c bioconda multiqc
+    conda install -c bioconda picard
+    pip3 install NanoPlot
+    conda install sistr_cmd
+    cd /opt
+    export QT_SELECT=5
+    wget -O ${APP_NAME_BANDAGE}-${VERSION_BANDAGE}.zip https://github.com/rrwick/Bandage/releases/download/v0.8.1/Bandage_Ubuntu_static_v0_8_1.zip
+    unzip ${APP_NAME_BANDAGE}-${VERSION_BANDAGE}.zip
+    rm -f ${APP_NAME_BANDAGE}-${VERSION_BANDAGE}.zip
+    cd /opt
+    wget -O ${APP_NAME_BBMAP}-${VERSION_BBMAP}.tar.gz http://downloads.sourceforge.net/project/bbmap/BBMap_${VERSION_BBMAP}.tar.gz
+    tar -xvf ${APP_NAME_BBMAP}-${VERSION_BBMAP}.tar.gz
+    rm -f ${APP_NAME_BBMAP}-${VERSION_BBMAP}.tar.gz
+    export PATH=/opt/bbmap/:$PATH
