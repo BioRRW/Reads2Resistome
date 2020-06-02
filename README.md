@@ -32,7 +32,7 @@ Acknowledgements
   Support and Contact
 -------------------
 Reads2Resistome is developed at Colorado State University within the Abdo Lab.
-For any issues or concerns, please contact us at EMAIL_HERE
+For any issues or concerns, please contact us at reedrich [at] colostate [dot] edu
 
 Developers
 ----------
