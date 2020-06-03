@@ -69,7 +69,8 @@ $ nextflow R2R-0.0.1.nf --help
             Column 1: Sample ID 
                 (must be unique, sample ID will be used to generate ALL reports for this sample)
             Column 2: Prokka_Database
-                (If not using custom database enter "default")
+                (If not using custom database enter "default"
+                 Else choose from" "Ecoli", "Salmonella", "Efaecalis", "Campy", or "Staph")
             Column 3: Path to long read .fastq file (may update later to input fast5 files)
                     (*Leave BLANK, no spaces, if only providing short reads)
             Column 4: Path to FORWARD short read .fastq file
