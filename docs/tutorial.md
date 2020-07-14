@@ -67,6 +67,7 @@ $ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --as
 Note: 
 - Here we will run the default hybrid pipeline, feel free to run nonhybrid and longread assemblies as well.
 - Output (--output) directories and Nextflow working directory (-w) are kept separate.
+- Here we use the default number fo threads (1) however, you may set a number of threads using the "--threads <INT>" option.
  
 ### You will see the nextflow processes and their progress (hybrid run):
 ```
