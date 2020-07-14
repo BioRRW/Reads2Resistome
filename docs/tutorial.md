@@ -40,11 +40,11 @@ Note:
 - We have set the paths to the sequence and reference files according to the [Usage](https://github.com/BioRRW/Reads2Resistome/blob/master/docs/usage.md) docs
   - Sample ID in column 1
   - Genus choice Prokka annotation in column 2 
-  - The long read file is in column 3
-  - The forward short read file in column 4
-  - The forward short read file in column 5
-  - QUAST reference genome file in column 6
-  - QUAST genome reference file in column 7 
+  - Path to the long read file is in column 3
+  - Path to the forward short read file in column 4
+  - Path to the forward short read file in column 5
+  - Path to the QUAST reference .fna file in column 6
+  - Path to the QUAST reference .gff file in column 7 
   
 ### Move back to the Reads2Resistome install directory:
 ```
