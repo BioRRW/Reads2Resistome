@@ -2,7 +2,7 @@ Tutorial
 --------
 
 ### Step 1 Installation
-Follow steps 1-4 on [Installation page](https://github.com/BioRRW/Mixtisque/blob/master/docs/installation.md)
+Follow steps 1-4 on [Installation page](https://github.com/BioRRW/Reads2Resistome/blob/master/docs/installation.md)
 
 ### Find the test data folder
 ```
