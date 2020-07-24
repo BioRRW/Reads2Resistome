@@ -1,7 +1,18 @@
 Installation
 ------------
 
-To run the pipeline, you will need Nextflow and the appropriate Singularity containers.
+To run the pipeline, you will need Nextflow, Singularity, Go and the appropriate Singularity containers.
+
+### Step 1 -- Download Prerequisites (recommended for freshly installed Linux)
+```
+$ sudo apt-get install software-properties-common
+$ sudo apt-get install -y openjdk-8-jre-headless
+$ sudo apt-get install –y build-essential
+$ sudo apt install –y python3
+$ sudo apt-get install -y libarchive-dev
+$ sudo apt install -y curl
+$ sudp apt update
+```
 
 ### Step 1 -- Download and install Nextflow
 Follow the link for operating system specific installation instructions: [Nextflow](https://www.nextflow.io/docs/latest/getstarted.html)
@@ -15,13 +26,13 @@ $ mv nextflow /usr/local/bin
 Follow the link to find installation instructions for your specific operating system:
 [Singularity](https://singularity.lbl.gov/all-releases)
 ```
-VERSION=2.5.2
-wget https://github.com/singularityware/singularity/releases/download/$VERSION/singularity-$VERSION.tar.gz
-tar xvf singularity-$VERSION.tar.gz
-cd singularity-$VERSION
-./configure --prefix=/usr/local
-make
-sudo make install
+$ export VERSION=3.5.2
+$ wget https://github.com/sylabs/singularity/releases/download/v${VERSION}/singularity-${VERSION}.tar.gz
+$ tar -xzf singularity-${VERSION}.tar.gz
+$ cd singularity
+$ ./mconfig
+$ make -C builddir
+$ sudo make -C builddir install
 ```
 
 ### Step 3 -- Download Source Code
@@ -30,9 +41,9 @@ git clone https://github.com/BioRRW/Reads2Resistome.git
 ```
 
 ### Step 4 -- Download Singularity Containers into the containers folder
-Navigate to /Reads2Resistome/containers: 
+Navigate to /Reads2Resistome/containers/: 
 ```
-cd Reads2Resistome/containers
+cd Reads2Resistome/containers/
 ```
 Run each of the following 'singularity pull' commands to download each of the required Singularity images to run the pipeline:
 
