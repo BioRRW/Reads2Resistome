@@ -4,15 +4,26 @@ Tutorial
 ### Step 1 Installation
 Follow steps 1-4 on [Installation page](https://github.com/BioRRW/Reads2Resistome/blob/master/docs/installation.md)
 
+### Find the containers folder
+```
+$ cd Reads2Resistome 
+$ cd containers/
+```
+You should see one directory and three not-built Singularity files
+```
+$ ls
+Test_Data R2R_Phigaro-0.0.1 R2R_Main-0.0.1 R2R_ABRICATE-0.0.1
+```
+
 ### Find the test data folder
 ```
 $ cd Reads2Resistome 
 $ cd containers/Test_Data/
 ```
-You should see two directories and two files
+You should see two directories and one input file
 ```
 $ ls
-fastq references input_tutorial.csv R2R-0.0.1.nf
+fastq references input_tutorial.csv 
 ```
 fastq folder contains four gzipped files
 Unzip the .fastq.gz files
@@ -25,15 +36,15 @@ $ gunzip *.fastq.gz
 ### Take a look at the references used for QUAST
 ```
 $ ls references/
-EcoliK12_MG1655_U00096.3.fna EcoliK12_MG1655_U00096.3.gff 
+EcoliK12_MG1655_U00096.3.fasta EcoliK12_MG1655_U00096.3.gff 
 ```
 
 ### Take a look at the input_tutorial.csv file
 ```
 $ cd ..
 $ nano input_tutorial.csv
-Tutorial_MinION_Ecoli,default,containers/Test_Data/fastq/MinION.fastq.gz,containers/Test_Data/fastq/Illumina_Test_R1.fastq.gz,containers/Test_Data/fastq/Illumina_Test_R2.fastq.gz,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.fna,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.gff
-Tutorial_PacBio_Ecoli,default,containers/Test_Data/fastq/PacBio_Test.fastq.gz,containers/Test_Data/fastq/Illumina_Test_R1.fastq.gz,containers/Test_Data/fastq/Illumina_Test_R2.fastq.gz,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.fna,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.gff
+Tutorial_MinION_Ecoli,default,containers/Test_Data/fastq/MinION_Test.fastq,containers/Test_Data/fastq/Illumina_Test_R1.fastq,containers/Test_Data/fastq/Illumina_Test_R2.fastq,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.fasta,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.gff
+Tutorial_PacBio_Ecoli,default,containers/Test_Data/fastq/PacBio_Test.fastq,containers/Test_Data/fastq/Illumina_Test_R1.fastq,containers/Test_Data/fastq/Illumina_Test_R2.fastq,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.fasta,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.gff
 ```
 Note:
 - We will be using the 'default' Prokka annotation database (column 2)
@@ -43,10 +54,11 @@ Note:
   - Path to the long read file is in column 3
   - Path to the forward short read file in column 4
   - Path to the forward short read file in column 5
-  - Path to the QUAST reference .fna file in column 6
+  - Path to the QUAST reference .fasta file in column 6
   - Path to the QUAST reference .gff file in column 7 
   
 ### Move back to the Reads2Resistome install directory:
+- This is where the pipeline needs to be run from
 ```
 $ cd ~/Reads2Resistome
 ```
