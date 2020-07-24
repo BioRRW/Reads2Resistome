@@ -14,7 +14,7 @@ $ sudo apt install -y curl
 $ sudp apt update
 ```
 
-### Step 1 -- Download and install Nextflow
+### Step 2 -- Download and install Nextflow
 Follow the link for operating system specific installation instructions: [Nextflow](https://www.nextflow.io/docs/latest/getstarted.html)
 ```
 $ curl -fsSL get.nextflow.io | bash
@@ -22,12 +22,23 @@ $ ./nextflow
 $ mv nextflow /usr/local/bin
 ```
 
-### Step 2 -- Download and install Singularity
+### Step 3 -- Download and install Go 
+```
+$ export VERSION=1.13 OS=linux ARCH=amd64
+$ wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz
+$ sudo tar -C /usr/local -xzvf go$VERSION.$OS-$ARCH.tar.gz
+$ rm go$VERSION.$OS-$ARCH.tar.gz
+echo 'export PATH=/usr/local/go/bin:$PATH' >> ~/.bashrc && \ source ~/.bashrc
+```
+
+### Step 4 -- Download and install Singularity
 Follow the link to find installation instructions for your specific operating system:
 [Singularity](https://singularity.lbl.gov/all-releases)
 ```
+$ sudo apt-get install -y libssl-dev
+$ sudo apt-get install -y uuid-dev
 $ export VERSION=3.5.2
-$ wget https://github.com/sylabs/singularity/releases/download/v${VERSION}/singularity-${VERSION}.tar.gz
+$ wget https://github.com/sylabs/singularity/releases/download/v${VERSION}/singularity-${VERSION}.tar.gz ​
 $ tar -xzf singularity-${VERSION}.tar.gz
 $ cd singularity
 $ ./mconfig
@@ -35,13 +46,14 @@ $ make -C builddir
 $ sudo make -C builddir install
 ```
 
-### Step 3 -- Download Source Code
+### Step 3 -- Download Source Code in desired directory
 ```
 git clone https://github.com/BioRRW/Reads2Resistome.git
 ```
 
 ### Step 4 -- Download Singularity Containers into the containers folder
-Navigate to /Reads2Resistome/containers/: 
+- Navigate to /Reads2Resistome/containers/: 
+- These images are large (4.65GB, 1.51 GB, 943.07 MB respectively)
 ```
 cd Reads2Resistome/containers/
 ```
