@@ -28,7 +28,7 @@ $ nextflow R2R-0.0.1.nf --help
     usage: nextflow R2R-0.0.1.nf [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--threads] [--Name] [-resume]
 
     General:
-        --help            This help
+        --help            This help menu
     Outputs:
         --input         STR     Path to input (.csv) file
                                     (*See Input (.csv) File Requirements for details)
@@ -46,7 +46,7 @@ $ nextflow R2R-0.0.1.nf --help
                                 normal = moderate contig size and misassembly rate
                                 bold = longest contigs, higher misassembly rate                              
     Annotation: 
-        --abricate_run     STR  (default: true)
+        --abricate_run  STR     (default: true)
                                 false = ABRICATE will not run
         --prokka_run    STR     (default: true)
                                 false = Prokka will not run
