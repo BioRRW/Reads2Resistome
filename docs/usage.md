@@ -29,10 +29,11 @@ $ nextflow R2R-0.0.1.nf --help
 
     General:
         --help            This help menu
-    Outputs:
+    Required Outputs:
         --input         STR     Path to input (.csv) file
                                     (*See Input (.csv) File Requirements for details)
         --outdir        STR     Output folder [auto] (default '')
+        --name          STR     Name of current Nextflow run
         
     Quality Control Options:
         --leading       INT     cut bases off the start of a read, if below a threshold quality 
