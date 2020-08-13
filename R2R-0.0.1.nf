@@ -570,11 +570,12 @@ Mixtisque: a bacterial genome assembler and resistome identification pipeline
     
     Example Usage: (Hybrid assembly using an Ecoli prokka database)
     
-        nextflow mixtisque.nf  --input "containers/data/raw/input_3_Samples.csv " --assembly hybrid --output "temp/output" -w "temp/work" 
+        nextflow mixtisque.nf  --input "containers/data/raw/input_3_Samples.csv " --assembly hybrid --output "temp/output" -w "temp/work" -- name Ecoli_Test
 
     Required command line parameters
 	Nextflow Parameters:
             -w              STR     Path to Nextflow working directory
+	    --name 	    STR     Name of current Nextflow run
 
         Input/Output:
             --input         STR     Path to input (.csv) file 
