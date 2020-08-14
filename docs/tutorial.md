@@ -44,7 +44,7 @@ EcoliK12_MG1655_U00096.3.fasta EcoliK12_MG1655_U00096.3.gff
 $ cd ..
 $ nano input_tutorial.csv
 Tutorial_MinION_Ecoli,default,containers/Test_Data/fastq/MinION_Test.fastq,containers/Test_Data/fastq/Illumina_Test_R1.fastq,containers/Test_Data/fastq/Illumina_Test_R2.fastq,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.fasta,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.gff
-Tutorial_PacBio_Ecoli,default,containers/Test_Data/fastq/PacBio_Test.fastq,containers/Test_Data/fastq/Illumina_Test_R1.fastq,containers/Test_Data/fastq/Illumina_Test_R2.fastq,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.fasta,containers/Test_Data/references/Ecoli/EcoliK12_MG1655_U00096.3.gff
+Tutorial_PacBio_Ecoli,default,containers/Test_Data/fastq/PacBio_Test.fastq,containers/Test_Data/fastq/Illumina_Test_R1.fastq,containers/Test_Data/fastq/Illumina_Test_R2.fastq,containers/Test_Data/references/EcoliK12_MG1655_U00096.3.fasta,containers/Test_Data/references/EcoliK12_MG1655_U00096.3.gff
 ```
 Note:
 - We will be using the 'default' Prokka annotation database (column 2)
