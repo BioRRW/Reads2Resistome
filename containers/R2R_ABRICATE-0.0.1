@@ -18,7 +18,10 @@ MirrorURL:  http://us.archive.ubuntu.com/ubuntu
     deb http://security.ubuntu.com/ubuntu bionic-security main restricted
     deb http://security.ubuntu.com/ubuntu bionic-security universe
     deb http://security.ubuntu.com/ubuntu bionic-security multiverse" >> /etc/apt/sources.list
+
     # Define variables
+    APP_NAME_samtools="samtools"
+    VERSION_samtools="1.10"
 
     # Install Dependencies
     apt-get update && apt-get install -y \
@@ -31,7 +34,15 @@ MirrorURL:  http://us.archive.ubuntu.com/ubuntu
     gcc \
     make \
     perl \
+    curl \
     bioperl \
+    libfile-slurp-perl \
+    emboss \
+    libjson-perl \
+    libtext-csv-perl \
+    liblwp-protocol-https-perl \
+    libwww-perl \
+    libcurl4-openssl-dev \
     libpath-tiny-perl \
     libbz2-dev \
     zlib1g-dev \
@@ -52,7 +63,17 @@ MirrorURL:  http://us.archive.ubuntu.com/ubuntu
     conda update -n base -c defaults conda
     
     conda install -c conda-forge -c bioconda -c defaults abricate
+    conda install -c bioconda perl-file-slurp
     
     cd /opt
     git clone https://github.com/tseemann/any2fasta.git
     cp any2fasta/any2fasta /usr/local/bin
+
+    cd /opt
+    wget -O ${APP_NAME_samtools}-${VERSION_samtools}.zip.bz2 https://github.com/samtools/samtools/releases/download/$VERSION_samtools/samtools-$VERSION_samtools.tar.bz2
+    tar -xjvf ${APP_NAME_samtools}-${VERSION_samtools}.zip.bz2
+    cd ${APP_NAME_samtools}-${VERSION_samtools}
+    make
+    make install
+
+   cpan install File::Slurp
