@@ -61,11 +61,11 @@ Run each of the following 'singularity pull' commands to download each of the re
 
 Main image:
 ```
-singularity pull R2R_Main-0.0.1.simg library://biorrw/default/reads2resistome:sha256.696b51e39c9790316009728a5f26500aafa5d03331afaf3c96fe119909d8ed95
+singularity pull R2R_Main-0.0.1.simg library://biorrw/default/reads2resistome:sha256.a2f205c0ef5a71474992dc336c8572debfde5592c03ee46f2044541cede74462
 ```
 ABRICATE image:
 ```
-singularity pull R2R_ABRICATE-0.0.1.simg library://biorrw/default/reads2resistome:sha256.f8008b6f5696ff49ee51fd12508ac35561d88b72f7a3b0c9ac87f49055073eef
+singularity pull R2R_ABRICATE-0.0.1.simg library://biorrw/default/reads2resistome:sha256.0efeef9d0e051d42fc80e8e3edcb0ab45d69dbad836f0ac65533196d7b9fe4d9
 ```
 Phigaro image:
 ```
