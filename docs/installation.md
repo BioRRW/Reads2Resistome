@@ -65,7 +65,7 @@ singularity pull R2R_Main-0.0.1.simg library://biorrw/default/reads2resistome:sh
 ```
 ABRICATE image:
 ```
-singularity pull R2R_ABRICATE-0.0.1.simg library://biorrw/default/reads2resistome:sha256.35d098fc73a1ce929bb4d498454dc316d3681de3cfd612aa2d1d7e0c027f3ea8
+singularity pull R2R_ABRICATE-0.0.1.simg library://biorrw/default/reads2resistome:sha256.f8008b6f5696ff49ee51fd12508ac35561d88b72f7a3b0c9ac87f49055073eef
 ```
 Phigaro image:
 ```
