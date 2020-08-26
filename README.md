@@ -6,6 +6,10 @@ Introduction
 ------------
 R2R is a bioinformatics pipeline for quality control, assembly, annotation and resistome characterization of bacterial genomes. Assembly can be done by either a hybrid approach or a non-hybrid approach. Illumina paired-end reads along with Oxford Nanopore or PacBio long reads are acceptable for hybrid assembly. Non-hybrid assembly can be preformed with Illumina paired-end reads or Oxford Nanopore or PacBio long reads. Resistome characterization includes identification of virulence factors and genes, antimicrobial resistance genes, serotype, plasmid replicons, antigen genes, and cgMLST gene alleles. Mixtisque provides multiple output files: 1) MultiQC-aggregated quality control and assembly reports (.html), 2) Individual FastQC reports 3) assembled, annotated contigs (.gfa), and 4) resistome report (.csv). There are additional output files, see documentation for details. 
 
+Additional analysis options
+-------------
+If you already have contigs and only want to run annotation and resistome characterizaion, see R2R-0.0.1-Fasta-QC-Ann-Only.nf for details. An explanation of the input is at the top of the R2R-0.0.1-Fasta-QC-Ann-Only.nf file. 
+
 Citation
 -------------
 Preprint: doi: https://doi.org/10.1101/2020.05.18.102715
