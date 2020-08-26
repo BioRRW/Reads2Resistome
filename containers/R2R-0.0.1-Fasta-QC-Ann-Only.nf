@@ -199,13 +199,13 @@ process ABRICATE {
     when: "${params.abricate_run}" == "true"
 
     """
-    /opt/miniconda/bin/abricate --threads ${threads} --db plasmidfinder ${assembly_gbk} > ${id}.pf.tab
-    /opt/miniconda/bin/abricate --threads ${threads} --db argannot ${assembly_gbk} > ${id}.arg.tab
-    /opt/miniconda/bin/abricate --threads ${threads} --db card ${assembly_gbk} > ${id}.card.tab
-    /opt/miniconda/bin/abricate --threads ${threads} --db megares ${assembly_gbk} > ${id}.meg.tab
-    /opt/miniconda/bin/abricate --threads ${threads} --db resfinder ${assembly_gbk} > ${id}.rf.tab
-    /opt/miniconda/bin/abricate --threads ${threads} --db vfdb ${assembly_gbk} > ${id}.vfdb.tab
-    /opt/miniconda/bin/abricate --threads ${threads} --db ncbi  ${assembly_gbk} > ${id}.ncbi.tab
+    /opt/miniconda/bin/abricate --db plasmidfinder ${assembly_gbk} > ${id}.pf.tab
+    /opt/miniconda/bin/abricate --db argannot ${assembly_gbk} > ${id}.arg.tab
+    /opt/miniconda/bin/abricate --db card ${assembly_gbk} > ${id}.card.tab
+    /opt/miniconda/bin/abricate --db megares ${assembly_gbk} > ${id}.meg.tab
+    /opt/miniconda/bin/abricate ---db resfinder ${assembly_gbk} > ${id}.rf.tab
+    /opt/miniconda/bin/abricate --db vfdb ${assembly_gbk} > ${id}.vfdb.tab
+    /opt/miniconda/bin/abricate --db ncbi  ${assembly_gbk} > ${id}.ncbi.tab
     /opt/miniconda/bin/abricate --summary *.tab > ${id}.abricate.summary.tab
     """
 
