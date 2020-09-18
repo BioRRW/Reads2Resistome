@@ -40,6 +40,7 @@ EcoliK12_MG1655_U00096.3.fasta EcoliK12_MG1655_U00096.3.gff
 ```
 
 ### Take a look at the input_tutorial.csv file
+* Columns can be left empty but still need to be accounted for with and empty entry: ie. ",," for no long read .fastq file
 ```
 $ cd ..
 $ nano input_tutorial.csv
