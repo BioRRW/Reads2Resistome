@@ -65,6 +65,7 @@ $ nextflow R2R-0.0.1.nf --help
 
 ### Input (.csv) File Requirements
     A user supplied input (.csv) is required.
+    * Columns can be left empty but still need to be accounted for with and empty entry: ie. ",," for no long read .fastq file
     
     Required:
             Column 1: Sample ID 
