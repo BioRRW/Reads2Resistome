@@ -18,14 +18,20 @@ $ nextflow R2R-0.0.1.nf --help
 ### Error Handling
 
 Errors which occur in a given process will terminate the remainder of the processes for that given input sample. In the event and error occurs in the pipeline for a given sample, the remainder of the samples will continue to run. 
+
 *To see which processes have failed, either view the command line output or alternatively include the '-with-trace' option in your run to see which processes have failed. 
-```
+
 Command line example:
+```
+Error executing process > 'FastQC (Tutorial_MinION_Ecoli)'
+Caused by:
+  Process `FastQC (Tutorial_MinION_Ecoli)` terminated with an error exit status (1)
+```
 
 '-with-trace' trace.txt example:
-task_id    hash          native_id       name            status   exit   
-2          b0/5e641c     35600           FastQC (IC20)   FAILED   1
-
+```
+task_id    hash          native_id       name                               status   exit   
+2          b0/5e641c     35600           FastQC (Tutorial_MinION_Ecoli)     FAILED   1
 ```
 
 ## Required command line parameters
