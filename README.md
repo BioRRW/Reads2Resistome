@@ -8,7 +8,7 @@ R2R is a bioinformatics pipeline for quality control, assembly, annotation and r
 
 OverView
 ------------
-![overview](images/flow-R2R.png)
+![overview](docs/images/flow-R2R.png)
 
 Additional analysis options
 -------------
