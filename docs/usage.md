@@ -70,7 +70,8 @@ task_id    hash          native_id       name                               stat
                                 false = ABRICATE will not run
         --prokka_run    STR     (default: true)
                                 false = Prokka will not run
-                                    
+        --locustag      STR     (default: PROKKA)
+                                Locus tag prefix                              
     Computation:
         --threads       INT     Number of CPUs to allocate to EACH process individually 
         
