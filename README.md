@@ -36,6 +36,8 @@ Acknowledgements
 
 - [nf-core] for pipeline adaption 
   - https://nf-co.re/
+- StaPH-B for some dockerfiles
+  - https://github.com/StaPH-B
 - USDA-ARS/ORISE for funding 
   - https://orise.orau.gov/usda-ars/
 - [@lakinsm] for repository structure adaption
