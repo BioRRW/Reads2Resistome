@@ -1,8 +1,8 @@
 #!/usr/bin/env nextflow
 
 /* Versions
-0.0.1: Dedupe removed, added ability for QUAST reference files to be included or not in the input .CSV file
-0.0.1: Error handing added *suggested to use -with-trace option for identification of samples with errors 
+0.0.2: Dedupe removed, added ability for QUAST reference files to be included or not in the input .CSV file
+0.0.2: Error handing added *suggested to use -with-trace option for identification of samples with errors 
 */
 
 /* Display help message */
