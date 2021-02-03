@@ -5,14 +5,14 @@ Usage
 
 To hybrid-assemble the tutorial sample data against a Ecoli database with approximately 16 threads:
 ```
-nextflow R2R-0.0.1.nf  --input "containers/data/raw/input_tutorial.csv " --assembly hybrid --threads 16 --output "temp/output" -w "temp/work" --name R2R_Sample_Hybrid_Assembly
+nextflow R2R-0.0.2.nf  --input "containers/data/raw/input_tutorial.csv " --assembly hybrid --threads 16 --output "temp/output" -w "temp/work" --name R2R_Sample_Hybrid_Assembly
 ```
 
 ### Display Help Message
 
 The `help` parameter displays the available options and commands.
 ```
-$ nextflow R2R-0.0.1.nf --help
+$ nextflow R2R-0.0.2.nf --help
 ```
 
 ### Error Handling
@@ -44,7 +44,7 @@ task_id    hash          native_id       name                               stat
         --output        STR     Path to output directory
    
 ## Full list of command line options
-    usage: nextflow R2R-0.0.1.nf [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--threads] [--Name] [-resume]
+    usage: nextflow R2R-0.0.2.nf [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--threads] [--Name] [-resume]
 
     General:
         --help            This help menu
