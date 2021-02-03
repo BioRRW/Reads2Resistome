@@ -53,7 +53,7 @@ git clone https://github.com/BioRRW/Reads2Resistome.git
 
 ### Step 4 -- Download Singularity Containers into the containers folder
 - Navigate to /Reads2Resistome/containers/: 
-- These images are large (4.65GB, 1.51 GB, 943.07 MB respectively)
+- These images are large (4.65GB, 1.51 GB, 943.07 MB, 508 MB, 258 MB respectively)
 ```
 cd Reads2Resistome/containers/
 ```
@@ -61,7 +61,7 @@ Run each of the following 'singularity pull' commands to download each of the re
 
 Main image:
 ```
-singularity pull R2R_Main-0.0.1.simg library://biorrw/default/reads2resistome:sha256.a2f205c0ef5a71474992dc336c8572debfde5592c03ee46f2044541cede74462
+singularity pull R2R_Main-0.0.2.simg library://biorrw/default/reads2resistome:sha256.03cdd22921c2adafd49790bc9fc7655dfa81ba4287950ab629986a507050df82
 ```
 ABRICATE image:
 ```
@@ -70,6 +70,18 @@ singularity pull R2R_ABRICATE-0.0.1.simg library://biorrw/default/reads2resistom
 Phigaro image:
 ```
 singularity pull R2R_Phigaro-0.0.1.simg library://biorrw/default/reads2resistome:sha256.7315e84ee4bfb8e5cb5bfe1aa76067a2cd6efc52e642b7d5e4a3f0a8fbc006d4
+```
+Prokka image:
+```
+singularity pull R2R_Prokka-0.0.2.simg library://biorrw/default/reads2resistome:sha256.82d2738e783f098c27bbc0604b75c2ec543469bc7397bfccb8f0a9748f2c8ef6
+```
+NanoPlot image:
+```
+singularity pull R2R_nanoplot-0.0.2.simg library://biorrw/default/reads2resistome:sha256.522aaa4b01b1bc7f4454cfe0c75ac6de069704d887bd16915383197c3352f08f4
+```
+QUAST image:
+```
+singularity pull R2R_QUAST-0.0.2.simg 
 ```
 
 When the download is complete, you should have three Singularity images in the containers folder.
@@ -80,5 +92,5 @@ R2R_Main-0.0.1.simg R2R_ABRICATE-0.0.1.simg R2R_Phigaro-0.0.1.simg
 
 ### Step 5 -- Run a Test
 ```
-nextflow R2R-0.0.1.nf --help
+nextflow R2R-0.0.2.nf --help
 ```
