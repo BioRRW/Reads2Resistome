@@ -9,7 +9,7 @@ R2R is a bioinformatics pipeline for quality control, assembly, annotation and r
 Overview
 ------------
 ![overview](docs/images/R2R_Flow_Diagram-0.0.2.png)
-
+<overview src="docs/images/R2R_Flow_Diagram-0.0.2.png" width="100" height="100">
 Additional analysis options
 -------------
 If you already have contigs and only want to run annotation and resistome characterizaion, see R2R-0.0.1-Fasta-QC-Ann-Only.nf for details. An explanation of the input is at the top of the R2R-0.0.1-Fasta-QC-Ann-Only.nf file. 
