@@ -52,7 +52,7 @@ git clone https://github.com/BioRRW/Reads2Resistome.git
 ```
 
 ### Step 4 -- Download Singularity Containers into the containers folder
-- Navigate to /Reads2Resistome/containers/: 
+- Navigate to /Reads2Resistome/containers/
 - These images are large (4.65GB, 1.51 GB, 943.07 MB, 508 MB, 258 MB respectively)
 ```
 cd Reads2Resistome/containers/
@@ -77,7 +77,7 @@ singularity pull R2R_Prokka-0.0.2.simg library://biorrw/default/reads2resistome:
 ```
 NanoPlot image:
 ```
-singularity pull library://biorrw/default/reads2resistome:sha256.522aaa4b01b1bc7f4454cfe0c75ac6de069704d887bd16915383197c3352f08f
+singularity pull R2R_nanoplot-0.0.2.simg library://biorrw/default/reads2resistome:sha256.522aaa4b01b1bc7f4454cfe0c75ac6de069704d887bd16915383197c3352f08f
 ```
 QUAST image:
 ```
@@ -87,7 +87,7 @@ singularity pull R2R_QUAST-0.0.2.simg library://biorrw/default/reads2resistome:s
 When the download is complete, you should have three Singularity images in the containers folder.
 ```
 ls
-R2R_Main-0.0.1.simg R2R_ABRICATE-0.0.1.simg R2R_Phigaro-0.0.1.simg
+R2R_Main-0.0.2.simg R2R_ABRICATE-0.0.1.simg R2R_Phigaro-0.0.1.simg R2R_nanoplot-0.0.2.simg R2R_QUAST-0.0.2.simg R2R_Prokka-0.0.2.simg
 ```
 
 ### Step 5 -- Run a Test
