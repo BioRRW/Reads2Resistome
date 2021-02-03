@@ -77,7 +77,7 @@ singularity pull R2R_Prokka-0.0.2.simg library://biorrw/default/reads2resistome:
 ```
 NanoPlot image:
 ```
-singularity pull R2R_nanoplot-0.0.2.simg library://biorrw/default/reads2resistome:sha256.522aaa4b01b1bc7f4454cfe0c75ac6de069704d887bd16915383197c3352f08f4
+singularity pull library://biorrw/default/reads2resistome:sha256.522aaa4b01b1bc7f4454cfe0c75ac6de069704d887bd16915383197c3352f08f
 ```
 QUAST image:
 ```
