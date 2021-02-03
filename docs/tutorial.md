@@ -12,7 +12,7 @@ $ cd containers/
 You should see one directory and three not-built Singularity files
 ```
 $ ls
-Test_Data R2R_Phigaro-0.0.1 R2R_Main-0.0.1 R2R_ABRICATE-0.0.1
+Test_Data R2R_Phigaro-0.0.1 R2R_Main-0.0.2 R2R_ABRICATE-0.0.1
 ```
 
 ### Find the test data folder
@@ -67,15 +67,15 @@ $ cd ~/Reads2Resistome
 
 Default hybrid pipeline:
 ```
-$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --output "temp/output_hybrid" -w "temp/work_hybrid" --name Tutorial_Hybrid
+$ nextflow R2R-0.0.2.nf  --input "containers/Test_Data/input_tutorial.csv " --output "temp/output_hybrid" -w "temp/work_hybrid" --name Tutorial_Hybrid
 ```
 Nonhybrid pipeline:
 ```
-$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid" --name Tutorial_Nonhybrid
+$ nextflow R2R-0.0.2.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid" --name Tutorial_Nonhybrid
 ```
 longread pipeline:
 ```
-$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly longread --output "temp/output_nonhybrid" -w "temp/work_nonhybrid" --name Tutorial_Long_Read
+$ nextflow R2R-0.0.2.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly longread --output "temp/output_nonhybrid" -w "temp/work_nonhybrid" --name Tutorial_Long_Read
 ```
 Note: 
 - Here we will run the default hybrid pipeline, feel free to run nonhybrid and longread assemblies as well.
@@ -136,7 +136,7 @@ Note: SISTR only runs when analyzing a *Salmonella* genome
 ### Understanding the working directory and the -resume option:
 Run the exact command again and observe:
 ```
-$ nextflow R2R-0.0.1.nf  --input "containers/Test_Data/input_tutorial.csv " --output "temp/output_hybrid" -w "temp/work_hybrid"
+$ nextflow R2R-0.0.2.nf  --input "containers/Test_Data/input_tutorial.csv " --output "temp/output_hybrid" -w "temp/work_hybrid"
 N E X T F L O W  ~  version 19.10.0
 Launching `mixtisque-4.0.1.nf` [intergalactic_engelbart] - revision: c74303a777
 [34/847094] process > FastQC (Tutorial_MinION_Ecoli)         [100%] 1 of 1, cached: 1 ✔
