@@ -8,7 +8,7 @@ R2R is a bioinformatics pipeline for quality control, assembly, annotation and r
 
 Overview
 ------------
-<img src="https://github.com/BioRRW/Reads2Resistome/blob/master/docs/images/R2R_Flow_Diagram-0.0.2.png" width="500" height="500">
+<img src="https://github.com/BioRRW/Reads2Resistome/blob/master/docs/images/R2R_Flow_Diagram-0.0.2.png" width="500" height="550">
   
 Additional analysis options
 -------------
