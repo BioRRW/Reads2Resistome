@@ -643,9 +643,9 @@ def helpMessage() {
     //log.info nfcoreHeader()
     log.info"""
 
-usage: nextflow R2R-0.0.1.1.nf [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--serovar] [--threads] [-resume]
+usage: nextflow R2R-0.0.2.nf [--help] [--input] [--output] [--assembly] [--help] [--leading] [--trailing] [--minlen] [--slindingwindow] [--trailing] [--mode] [--serovar] [--threads] [-resume]
     
-Mixtisque: a bacterial genome assembler and resistome identification pipeline 
+Reads2Resistome: a bacterial genome assembler and resistome identification pipeline 
     
     
     Example Usage: (Hybrid assembly using an Ecoli prokka database)
