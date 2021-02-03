@@ -81,7 +81,7 @@ singularity pull R2R_nanoplot-0.0.2.simg library://biorrw/default/reads2resistom
 ```
 QUAST image:
 ```
-singularity pull R2R_QUAST-0.0.2.simg 
+singularity pull R2R_QUAST-0.0.2.simg library://biorrw/default/reads2resistome:sha256.a12c6d9fc0b6e7b89a2199454c5e7b1d817c82c8033ab664097d01664d44e553
 ```
 
 When the download is complete, you should have three Singularity images in the containers folder.
