@@ -170,7 +170,6 @@ process QualityControl {
 
                 if [[ ${params.assembly} == "hybrid" || ${params.assembly} == "nonhybrid" ]]; then
 			echo ${id}_paired_R1.fastq
-			echo "here!"
                         java -jar ${TRIMMOMATIC} PE $forward_pair $reverse_pair \
                         ${id}_paired_R1.fastq \
                         ${id}_unpaired_R1.fastq \
