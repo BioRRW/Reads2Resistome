@@ -650,7 +650,7 @@ Reads2Resistome: a bacterial genome assembler and resistome identification pipel
     
     Example Usage: (Hybrid assembly using an Ecoli prokka database)
     
-        nextflow mixtisque.nf  --input "containers/data/raw/input_3_Samples.csv " --assembly hybrid --output "temp/output" -w "temp/work" 
+        nextflow R2R-0.0.2.nf.nf  --input "containers/data/raw/input_3_Samples.csv " --assembly hybrid --output "temp/output" -w "temp/work" 
 
     Required command line parameters
 	Nextflow Parameters:
