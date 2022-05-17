@@ -67,15 +67,15 @@ $ cd ~/Reads2Resistome
 
 Default hybrid pipeline:
 ```
-$ nextflow R2R-0.0.2.nf  --input "containers/Test_Data/input_tutorial.csv " --output "temp/output_hybrid" -w "temp/work_hybrid" --name Tutorial_Hybrid
+$ nextflow R2R-0.0.2.nf  --input "containers/Test_Data/input_tutorial.csv" --output "temp/output_hybrid" -w "temp/work_hybrid" --name Tutorial_Hybrid
 ```
 Nonhybrid pipeline:
 ```
-$ nextflow R2R-0.0.2.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid" --name Tutorial_Nonhybrid
+$ nextflow R2R-0.0.2.nf  --input "containers/Test_Data/input_tutorial.csv" --assembly nonhybrid --output "temp/output_nonhybrid" -w "temp/work_nonhybrid" --name Tutorial_Nonhybrid
 ```
 longread pipeline:
 ```
-$ nextflow R2R-0.0.2.nf  --input "containers/Test_Data/input_tutorial.csv " --assembly longread --output "temp/output_nonhybrid" -w "temp/work_nonhybrid" --name Tutorial_Long_Read
+$ nextflow R2R-0.0.2.nf  --input "containers/Test_Data/input_tutorial.csv" --assembly longread --output "temp/output_nonhybrid" -w "temp/work_nonhybrid" --name Tutorial_Long_Read
 ```
 Note: 
 - Here we will run the default hybrid pipeline, feel free to run nonhybrid and longread assemblies as well.
