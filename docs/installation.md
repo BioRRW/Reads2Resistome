@@ -46,12 +46,12 @@ $ make -C builddir
 $ sudo make -C builddir install
 ```
 
-### Step 3 -- Download Source Code in desired directory
+### Step 4 -- Download Source Code in desired directory
 ```
 git clone https://github.com/BioRRW/Reads2Resistome.git
 ```
 
-### Step 4 -- Download Singularity Containers into the containers folder
+### Step 5 -- Download Singularity Containers into the containers folder
 - Navigate to /Reads2Resistome/containers/
 - These images are large (4.65GB, 1.51 GB, 943.07 MB, 508 MB, 258 MB respectively)
 ```
