@@ -655,7 +655,7 @@ Reads2Resistome: a bacterial genome assembler and resistome identification pipel
     Required command line parameters
 	Nextflow Parameters:
             -w              STR     Path to Nextflow working directory
-	    -name	    STR     Name of current nextflow run
+	    --name	    STR     Name of current nextflow run
 
         Input/Output:
             --input         STR     Path to input (.csv) file 
