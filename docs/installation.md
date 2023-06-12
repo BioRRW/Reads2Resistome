@@ -78,7 +78,7 @@ $ singularity pull R2R_Phigaro-0.0.1.simg library://biorrw/default/reads2resisto
 ```
 Prokka image:
 ```
-$ singularity pull R2R_Prokka-0.0.2.simg library://biorrw/default/reads2resistome:sha256.68f1a7396a9d61cbb5e9bec0f4911a2a0c7f920994f7d1514c843f7a18771f22
+$ singularity pull prokka_latest.sif library://biorrw/default/reads2resistome:sha256.68f1a7396a9d61cbb5e9bec0f4911a2a0c7f920994f7d1514c843f7a18771f22
 ```
 NanoPlot image:
 ```
