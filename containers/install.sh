@@ -4,7 +4,7 @@ singularity pull R2R_ABRICATE-0.0.1.simg library://biorrw/default/reads2resistom
 
 singularity pull R2R_Phigaro-0.0.1.simg library://biorrw/default/reads2resistome:sha256.7315e84ee4bfb8e5cb5bfe1aa76067a2cd6efc52e642b7d5e4a3f0a8fbc006d4
 
-singularity pull R2R_Prokka-0.0.2.simg library://biorrw/default/reads2resistome:sha256.68f1a7396a9d61cbb5e9bec0f4911a2a0c7f920994f7d1514c843f7a18771f22
+singularity pull prokka_latest.sif library://biorrw/default/reads2resistome:sha256.68f1a7396a9d61cbb5e9bec0f4911a2a0c7f920994f7d1514c843f7a18771f22
 
 singularity pull R2R_nanoplot-0.0.2.simg library://biorrw/default/reads2resistome:sha256.522aaa4b01b1bc7f4454cfe0c75ac6de069704d887bd16915383197c3352f08f
 
